@@ -28,6 +28,7 @@ class CustomButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(borderRadius ?? 4.0),
       child: Material(
+        color: borderColor ?? Colors.transparent,
         child: InkWell(
           onTap: () => onClick?.call(),
           splashColor: AppColors.darkOrchid.withOpacity(0.5),

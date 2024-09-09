@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:want_to_do/ui/pages/login/login_provider.dart';
 import 'package:want_to_do/ui/pages/welcome/welcome_provider.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: WelcomeProvider(),
+      home: LoginProvider(),
     );
   }
 }

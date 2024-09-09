@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:want_to_do/ui/pages/onboarding/onboarding_page.dart';
-import 'package:want_to_do/ui/pages/onboarding/onboarding_provider.dart';
+import 'package:want_to_do/ui/pages/welcome/welcome_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: OnboardingProvider(),
+      home: WelcomeProvider(),
     );
   }
 }

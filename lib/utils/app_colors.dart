@@ -9,6 +9,9 @@ final class AppColors {
   static const Color lightRed = const Color(0xffFF4949);
   static const Color lavenderBlue = const Color(0xff8687E7);
   static const Color darkGrey = const Color(0xff363636);
+  static const Color davyGrey = const Color(0xff535353);
+  static const Color darkJungleGreen = const Color(0xff1D1D1D);
+  static const Color mountainMist = const Color(0xff979797);
   static const Color silverChalice = const Color(0xffAFAFAF);
   static const Color salmonPink = const Color(0xffFF8080);
   static const Color crimsonRed = const Color(0xffA30000);

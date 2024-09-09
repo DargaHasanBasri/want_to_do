@@ -8,9 +8,11 @@ class CustomButton extends StatelessWidget {
     Color? titleColor,
     Color? borderColor,
     String? title,
+    String? iconLogoAddress,
     double? borderRadius,
     VoidCallback? onClick,
   })  : title = title ?? 'NEXT',
+        iconLogoAddress = iconLogoAddress ?? '',
         backgroundColor = backgroundColor ?? AppColors.crocusPurple,
         titleColor = titleColor ?? AppColors.white,
         borderColor = borderColor ?? Colors.transparent,
@@ -19,6 +21,7 @@ class CustomButton extends StatelessWidget {
   final Color? backgroundColor;
   final Color? titleColor;
   final String title;
+  final String iconLogoAddress;
   final VoidCallback? onClick;
   final double? borderRadius;
   final Color? borderColor;
@@ -41,22 +44,41 @@ class CustomButton extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(borderRadius ?? 4.0),
             ),
-            child: Center(
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-                child: Text(
-                  title,
-                  style: TextStyle(
-                    color: titleColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  getIconLogo(),
+                  Text(
+                    title,
+                    style: TextStyle(
+                      color: titleColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ),
         ),
       ),
     );
+  }
+
+  Widget getIconLogo() {
+    if (iconLogoAddress.isNotEmpty) {
+      return Padding(
+        padding: const EdgeInsets.only(right: 14),
+        child: Image.asset(
+          'assets/${iconLogoAddress}.png',
+          width: 24,
+          height: 24,
+        ),
+      );
+    } else {
+      return const SizedBox();
+    }
   }
 }

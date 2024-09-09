@@ -54,16 +54,24 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           autofocus: widget.isAutoTrue ?? false,
           keyboardType: widget.inputType,
           onChanged: _onChanged,
+          style: const TextStyle(
+            color: AppColors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+          ),
           decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: TextStyle(
-              fontSize: 14,
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: AppColors.davyGrey,
             ),
             filled: true,
             fillColor: AppColors.darkJungleGreen,
-            contentPadding: const EdgeInsets.all(12),
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 12,
+              vertical: 16,
+            ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(widget.borderRadius),
               borderSide: BorderSide(

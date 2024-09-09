@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:want_to_do/utils/app_colors.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -6,7 +7,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -16,7 +17,7 @@ class SplashPage extends StatelessWidget {
             Text(
               'WantToDo',
               style: TextStyle(
-                color: Color(0xffffffff),
+                color: AppColors.white,
                 fontSize: 40,
                 fontWeight: FontWeight.w700,
               ),

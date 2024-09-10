@@ -80,7 +80,15 @@ class _FingerPrintScannerPageState
                 CustomButton(
                   title: 'Login with FingerPrint',
                   iconLogoAddress: 'ic_fingerprint',
-                  onClick: () {},
+                  onClick: () {
+                    showCustomBottomSheet(
+                      context: context,
+                      child: BottomSheetContent(
+                        iconColor: AppColors.white,
+                        messageColor: AppColors.white,
+                      ),
+                    );
+                  },
                   backgroundColor: AppColors.backgroundColor,
                   borderColor: AppColors.crocusPurple,
                 ),

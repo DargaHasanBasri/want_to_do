@@ -20,3 +20,7 @@ export 'package:want_to_do/ui/pages/welcome/welcome_view_model.dart';
 export 'package:want_to_do/ui/pages/onboarding/onboarding_page.dart';
 export 'package:want_to_do/ui/pages/login/login_page.dart';
 export 'package:fluttertoast/fluttertoast.dart';
+export 'package:want_to_do/ui/pages/register/register_page.dart';
+export 'package:want_to_do/ui/pages/register/register_view_model.dart';
+export 'package:want_to_do/ui/pages/register/register_provider.dart';
+

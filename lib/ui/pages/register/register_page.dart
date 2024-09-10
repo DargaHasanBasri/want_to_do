@@ -1,0 +1,186 @@
+import 'package:want_to_do/export.dart';
+
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends BaseStatefulState<RegisterPage> {
+  final TextEditingController _controllerUserName = TextEditingController();
+  final TextEditingController _controllerPassword = TextEditingController();
+  final TextEditingController _controllerConfirmPassword =
+      TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: AppColors.backgroundColor,
+        forceMaterialTransparency: true,
+        leading: IconButton(
+          padding: EdgeInsets.zero,
+          onPressed: () {},
+          icon: Image.asset(
+            'assets/ic_arrow_back.png',
+            color: AppColors.white,
+          ),
+        ),
+      ),
+      backgroundColor: AppColors.backgroundColor,
+      body: _buildBody(context),
+    );
+  }
+
+  Widget _buildBody(BuildContext context) {
+    final vm = context.watch<RegisterViewModel>();
+    return SingleChildScrollView(
+      child: SafeArea(
+        child: Padding(
+          padding: AppPaddings.pagePaddingHorizontal,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 30),
+                child: Text(
+                  'Register',
+                  style: TextStyle(
+                    color: AppColors.white.withOpacity(0.87),
+                    fontSize: 32,
+                    fontWeight: FontWeight.w700,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                ),
+              ),
+              CustomTextFormField(
+                controller: _controllerUserName,
+                textFieldName: 'Username',
+                hintText: 'Enter your Username',
+                onChanged: (String text) {
+                  vm.usernameText = _controllerUserName.text;
+                },
+              ),
+              SizedBox(height: 26),
+              CustomTextFormField(
+                controller: _controllerPassword,
+                textFieldName: 'Password',
+                hintText: 'Enter your Password',
+                isHaveObscure: true,
+                onChanged: (String text) {
+                  vm.passwordText = _controllerPassword.text;
+                },
+              ),
+              SizedBox(height: 26),
+              CustomTextFormField(
+                controller: _controllerConfirmPassword,
+                textFieldName: 'Confirm Password',
+                hintText: 'Re-Enter your Password',
+                isHaveObscure: true,
+                onChanged: (String text) {
+                  vm.passwordConfirmText = _controllerConfirmPassword.text;
+                },
+              ),
+              SizedBox(height: 40),
+              CustomButton(
+                title: 'LOGIN',
+                onClick: () {
+                  vm.buttonIsActive()
+                      ? SizedBox()
+                      : showToastMessage(
+                          'Lütfen Boş Alan Bırakmayın ve Şifreleri Aynı Girin!!!!!!!!!!!!!!',
+                        );
+                },
+                backgroundColor: vm.buttonIsActive()
+                    ? AppColors.crocusPurple
+                    : AppColors.crocusPurple.withOpacity(0.5),
+                titleColor: vm.buttonIsActive()
+                    ? AppColors.white
+                    : AppColors.white.withOpacity(0.5),
+              ),
+              SizedBox(height: 24),
+              _orText(),
+              SizedBox(height: 24),
+              CustomButton(
+                title: 'Login with Google',
+                iconLogoAddress: 'ic_logo_google',
+                onClick: () {},
+                backgroundColor: AppColors.backgroundColor,
+                borderColor: AppColors.crocusPurple,
+              ),
+              SizedBox(height: 20),
+              CustomButton(
+                title: 'Login with Apple',
+                iconLogoAddress: 'ic_logo_apple',
+                onClick: () {},
+                backgroundColor: AppColors.backgroundColor,
+                borderColor: AppColors.crocusPurple,
+              ),
+              SizedBox(height: 40),
+              Center(
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    text: 'Already have an account? ',
+                    style: TextStyle(
+                      color: AppColors.mountainMist,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Login',
+                        style: TextStyle(
+                          color: AppColors.white.withOpacity(0.87),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        recognizer: TapGestureRecognizer()..onTap = () {},
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _orText() {
+    return Row(
+      children: [
+        Expanded(
+          child: Container(
+            height: 1,
+            color: AppColors.mountainMist,
+          ),
+        ),
+        SizedBox(width: 2),
+        Text(
+          'or',
+          style: TextStyle(
+            color: AppColors.mountainMist,
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            overflow: TextOverflow.ellipsis,
+          ),
+          textAlign: TextAlign.center,
+          maxLines: 2,
+        ),
+        SizedBox(width: 2),
+        Expanded(
+          child: Container(
+            height: 1,
+            color: AppColors.mountainMist,
+          ),
+        ),
+      ],
+    );
+  }
+}

@@ -75,7 +75,13 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
               SizedBox(height: 70),
               CustomButton(
                 title: 'LOGIN',
-                onClick: () {},
+                onClick: () {
+                  vm.buttonIsActive()
+                      ? SizedBox()
+                      : showToastMessage(
+                          'Eksik veya hatalı giriş yaptınız!',
+                        );
+                },
                 backgroundColor: vm.buttonIsActive()
                     ? AppColors.crocusPurple
                     : AppColors.crocusPurple.withOpacity(0.5),

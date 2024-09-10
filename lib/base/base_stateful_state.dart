@@ -17,7 +17,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
       positionedToastBuilder: (context, child) {
         return Positioned(
           child: child,
-          top: 34,
+          top: 50,
           left: 20,
           right: 20,
         );
@@ -39,7 +39,9 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
           color: AppColors.white,
           fontSize: 16,
           fontWeight: FontWeight.w400,
+          overflow: TextOverflow.ellipsis,
         ),
+        textAlign: TextAlign.center,
       ),
     );
   }

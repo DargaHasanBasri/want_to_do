@@ -23,4 +23,9 @@ export 'package:fluttertoast/fluttertoast.dart';
 export 'package:want_to_do/ui/pages/register/register_page.dart';
 export 'package:want_to_do/ui/pages/register/register_view_model.dart';
 export 'package:want_to_do/ui/pages/register/register_provider.dart';
-
+export 'package:want_to_do/ui/pages/finger_print_scanner/finger_print_scanner_page.dart';
+export 'package:want_to_do/ui/pages/finger_print_scanner/finger_print_scanner_view_model.dart';
+export 'package:want_to_do/ui/pages/finger_print_scanner/finger_print_scanner_provider.dart';
+export 'package:want_to_do/ui/widgets/custom_orText.dart';
+export 'package:cached_network_image/cached_network_image.dart';
+export 'package:want_to_do/ui/widgets/custom_user_avatar.dart';

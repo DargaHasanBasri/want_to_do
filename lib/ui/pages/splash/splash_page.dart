@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:want_to_do/utils/app_colors.dart';
+import 'package:want_to_do/export.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});

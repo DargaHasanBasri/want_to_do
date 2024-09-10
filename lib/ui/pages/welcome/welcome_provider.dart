@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:want_to_do/ui/pages/welcome/welcome_page.dart';
-import 'package:want_to_do/ui/pages/welcome/welcome_view_model.dart';
+import 'package:want_to_do/export.dart';
 
 class WelcomeProvider extends StatelessWidget {
   const WelcomeProvider({super.key});

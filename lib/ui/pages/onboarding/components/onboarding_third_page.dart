@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:want_to_do/ui/pages/onboarding/components/custom_current_page_bar.dart';
-import 'package:want_to_do/utils/app_colors.dart';
+import 'package:want_to_do/export.dart';
 
 class OnboardingThirdPage extends StatelessWidget {
   const OnboardingThirdPage({super.key});

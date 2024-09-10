@@ -1,14 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:want_to_do/base/base_stateful_state.dart';
-import 'package:want_to_do/ui/pages/onboarding/components/custom_current_page_bar.dart';
-import 'package:want_to_do/ui/pages/onboarding/components/onboarding_first_page.dart';
-import 'package:want_to_do/ui/pages/onboarding/components/onboarding_second_page.dart';
-import 'package:want_to_do/ui/pages/onboarding/components/onboarding_third_page.dart';
-import 'package:want_to_do/ui/pages/onboarding/onboarding_view_model.dart';
-import 'package:want_to_do/ui/widgets/custom_button.dart';
-import 'package:want_to_do/ui/widgets/custom_text_button.dart';
-import 'package:want_to_do/utils/app_colors.dart';
+import 'package:want_to_do/export.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});

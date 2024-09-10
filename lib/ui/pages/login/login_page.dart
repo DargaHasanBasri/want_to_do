@@ -1,10 +1,4 @@
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-import 'package:want_to_do/base/base_stateful_state.dart';
-import 'package:want_to_do/ui/widgets/custom_button.dart';
-import 'package:want_to_do/ui/widgets/custom_text_form_field.dart';
-import 'package:want_to_do/utils/app_colors.dart';
-import 'package:want_to_do/utils/app_paddings.dart';
+import 'package:want_to_do/export.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -33,11 +27,12 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
         ),
       ),
       backgroundColor: AppColors.backgroundColor,
-      body: _buildBody(),
+      body: _buildBody(context),
     );
   }
 
-  Widget _buildBody() {
+  Widget _buildBody(BuildContext context) {
+    final vm = context.watch<LoginViewModel>();
     return SingleChildScrollView(
       child: SafeArea(
         child: Padding(
@@ -63,19 +58,30 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                 controller: _controllerUserName,
                 textFieldName: 'Username',
                 hintText: 'Enter your Username',
+                onChanged: (String text) {
+                  vm.usernameText = _controllerUserName.text;
+                },
               ),
               SizedBox(height: 26),
               CustomTextFormField(
                 controller: _controllerPassword,
                 textFieldName: 'Password',
                 hintText: 'Enter your Password',
+                isHaveObscure: true,
+                onChanged: (String text) {
+                  vm.passwordText = _controllerPassword.text;
+                },
               ),
               SizedBox(height: 70),
               CustomButton(
                 title: 'LOGIN',
                 onClick: () {},
-                backgroundColor: AppColors.crocusPurple.withOpacity(0.5),
-                titleColor: AppColors.white.withOpacity(0.5),
+                backgroundColor: vm.buttonIsActive()
+                    ? AppColors.crocusPurple
+                    : AppColors.crocusPurple.withOpacity(0.5),
+                titleColor: vm.buttonIsActive()
+                    ? AppColors.white
+                    : AppColors.white.withOpacity(0.5),
               ),
               SizedBox(height: 30),
               _orText(),

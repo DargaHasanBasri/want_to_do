@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:want_to_do/ui/widgets/custom_button.dart';
-import 'package:want_to_do/utils/app_colors.dart';
-import 'package:want_to_do/utils/app_paddings.dart';
+import 'package:want_to_do/export.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});

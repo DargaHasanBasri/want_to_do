@@ -90,7 +90,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                     : AppColors.white.withOpacity(0.5),
               ),
               SizedBox(height: 30),
-              _orText(),
+              CustomOrText(),
               SizedBox(height: 30),
               CustomButton(
                 title: 'Login with Google',
@@ -137,38 +137,6 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget _orText() {
-    return Row(
-      children: [
-        Expanded(
-          child: Container(
-            height: 1,
-            color: AppColors.mountainMist,
-          ),
-        ),
-        SizedBox(width: 2),
-        Text(
-          'or',
-          style: TextStyle(
-            color: AppColors.mountainMist,
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-            overflow: TextOverflow.ellipsis,
-          ),
-          textAlign: TextAlign.center,
-          maxLines: 2,
-        ),
-        SizedBox(width: 2),
-        Expanded(
-          child: Container(
-            height: 1,
-            color: AppColors.mountainMist,
-          ),
-        ),
-      ],
     );
   }
 }

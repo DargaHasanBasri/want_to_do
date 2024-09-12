@@ -11,9 +11,8 @@ Future<void> main() async {
   );
   runApp(
     EasyLocalization(
-      supportedLocales: [AppLocaleConstant.TR_LOCALE],
-      path: 'assets/langs',
-      fallbackLocale: Locale('tr', 'TR'),
+      supportedLocales: [AppLocaleConstant.EN_LOCALE],
+      path: AppLocaleConstant.LANG_PATH,
       child: const MyApp(),
     ),
   );
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: WelcomeProvider(),
+      home: SettingsProvider(),
     );
   }
 }

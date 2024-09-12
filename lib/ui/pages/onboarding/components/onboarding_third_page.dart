@@ -7,7 +7,7 @@ class OnboardingThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/img_onboarding_third.png'),
+        Image.asset('assets/images/img_onboarding_third.png'),
         Padding(
           padding: const EdgeInsets.only(top: 50, bottom: 42),
           child: Text(

@@ -11,7 +11,7 @@ class SplashPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/img_app_logo.png'),
+            Image.asset('assets/images/img_app_logo.png'),
             SizedBox(height: 20),
             Text(
               'WantToDo',

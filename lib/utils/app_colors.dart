@@ -4,6 +4,7 @@ final class AppColors {
   AppColors._();
 
   static const Color backgroundColor = const Color(0xff121212);
+  static const Color black = const Color(0xff000000);
   static const Color white = const Color(0xffFFFFFF);
   static const Color crocusPurple = const Color(0xff8875FF);
   static const Color lightRed = const Color(0xffFF4949);

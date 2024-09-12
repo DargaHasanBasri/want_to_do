@@ -38,4 +38,18 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
       },
     );
   }
+
+  void showPopupDialog({
+    required BuildContext context,
+    required Widget child,
+  }) {
+    showDialog<void>(
+      barrierColor: AppColors.black.withOpacity(0.74),
+      barrierDismissible: false,
+      context: context,
+      builder: (context) {
+        return child;
+      },
+    );
+  }
 }

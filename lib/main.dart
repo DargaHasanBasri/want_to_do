@@ -11,9 +11,17 @@ Future<void> main() async {
   );
   runApp(
     EasyLocalization(
-      supportedLocales: [AppLocaleConstant.EN_LOCALE],
+      supportedLocales: [
+        AppLocaleConstant.TR_LOCALE,
+        AppLocaleConstant.EN_LOCALE,
+      ],
       path: AppLocaleConstant.LANG_PATH,
-      child: const MyApp(),
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => SettingsViewModel()),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }

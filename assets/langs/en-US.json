@@ -1,0 +1,55 @@
+{
+  "appTitle": "WantToDo",
+  "calendar": "Calendar",
+  "focus": "Focus",
+  "profile": "Profile",
+  "settings": "Settings",
+  "onboarding": {
+    "onboardingTitleFirst": "Manage your tasks",
+    "onboardingMsgFirst": "You can easily manage all of your daily tasks in WantTODO for free",
+    "onboardingTitleSecond": "Create daily routine",
+    "onboardingMsgSecond": "In WantToDO  you can create your personalized routine to stay productive",
+    "onboardingTitleThird": "Organize your tasks",
+    "onboardingMsgThird": "You can organize your daily tasks by adding your tasks into separate categories",
+    "welcomeTitle": "Welcome to WantToDo",
+    "welcomeMessage": "Please login to your account or create new account to continue"
+  },
+  "loginRegister": {
+    "hintTextUsername": "Enter your Username",
+    "hintTextPassword": "Enter your Password",
+    "hintTextConfirmPassword": "Re-Enter your Password",
+    "withGoogle": "Login with Google",
+    "withApple": "Login with Apple",
+    "withFingerPrint": "Login with FingerPrint",
+    "isAccountNegative": "Don’t have an account? ",
+    "isAccountPositive": "Already have an account? ",
+    "fingerPrintMsg": "Please click the button and hold your finger on the fingerprint scanner to verify your identity",
+    "useFinger": "Use Finger Scanner"
+  },
+  "home": {
+    "home": "Home",
+    "emptyListTitle": "What do you want to do today?",
+    "emptyListMsg": "Tap + to add your tasks"
+  },
+  "appSettings": {
+    "changeColor": "Change app color",
+    "changeLanguage": "Change app language",
+    "import": "Import",
+    "importGoogleCalendar": "Import from Google calendar"
+  },
+  "errorMessages": {
+    "missingOrIncorrect": "You have entered incompletely or incorrectly!",
+    "emptyOrNotSame": "Please do not leave any empty fields and enter the same passwords!"
+  },
+  "login": "Login",
+  "register": "Register",
+  "username": "Username",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "skip": "Skip",
+  "back": "Back",
+  "next": "Next",
+  "cancel": "Cancel",
+  "getStarted": "Get Started",
+  "createAccount": "Create Account"
+}

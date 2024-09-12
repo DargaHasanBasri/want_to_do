@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -51,7 +52,7 @@ class _WelcomePageState extends State<WelcomePage> {
           child: Padding(
             padding: const EdgeInsets.only(top: 50),
             child: Text(
-              'Welcome to WantToDo',
+              LocaleKeys.onboarding_welcomeTitle.locale,
               style: TextStyle(
                 color: AppColors.white.withOpacity(0.87),
                 fontSize: 32,

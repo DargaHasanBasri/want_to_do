@@ -1,13 +1,14 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class SettingsPage extends StatefulWidget {
+  const SettingsPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<SettingsPage> createState() => _SettingsPageState();
 }
 
-class _HomePageState extends BaseStatefulState<HomePage> {
+class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,21 +18,12 @@ class _HomePageState extends BaseStatefulState<HomePage> {
     );
   }
 
-  Widget _buildBody() {
-    return SafeArea(
-      child: Padding(
-        padding: AppPaddings.pagePaddingHorizontal,
-        child: EmptyList(),
-      ),
-    );
-  }
-
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: AppColors.backgroundColor,
       forceMaterialTransparency: true,
       title: Text(
-        'Home',
+        LocaleKeys.settings.locale,
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w400,
@@ -43,22 +35,16 @@ class _HomePageState extends BaseStatefulState<HomePage> {
         padding: EdgeInsets.zero,
         onPressed: () {},
         icon: Image.asset(
-          'assets/images/ic_sidebar_menu.png',
+          'assets/images/ic_arrow_back_left.png',
           color: AppColors.white,
         ),
       ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.only(
-            right: 10,
-            top: 8,
-          ),
-          child: CustomUserAvatar(
-            borderColor: Colors.transparent,
-            circleRadius: 18,
-          ),
-        ),
-      ],
+    );
+  }
+
+  Widget _buildBody() {
+    return Column(
+      children: [],
     );
   }
 }

@@ -9,7 +9,7 @@ class EmptyList extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
-          child: Image.asset('assets/img_checklist.png'),
+          child: Image.asset('assets/images/img_checklist.png'),
         ),
         Text(
           'What do you want to do today?',

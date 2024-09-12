@@ -21,7 +21,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
           padding: EdgeInsets.zero,
           onPressed: () {},
           icon: Image.asset(
-            'assets/ic_arrow_back.png',
+            'assets/images/ic_arrow_back_left.png',
             color: AppColors.white,
           ),
         ),

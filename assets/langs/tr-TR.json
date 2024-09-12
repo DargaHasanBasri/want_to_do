@@ -1,0 +1,56 @@
+{
+  "appTitle": "WantToDo",
+  "calendar": "Takvim",
+  "focus": "Odaklanma",
+  "profile": "Profil",
+  "settings": "Ayarlar",
+  "onboarding": {
+    "onboardingTitleFirst": "Görevlerinizi yönetin",
+    "onboardingMsgFirst": "WantToDo ile tüm günlük görevlerinizi ücretsiz olarak kolayca yönetebilirsiniz",
+    "onboardingTitleSecond": "Günlük rutin oluşturun",
+    "onboardingMsgSecond": "WantToDo ile üretken kalmak için kişiselleştirilmiş rutininizi oluşturabilirsiniz",
+    "onboardingTitleThird": "Görevlerinizi organize edin",
+    "onboardingMsgThird": "Günlük görevlerinizi, farklı kategorilere ayırarak daha düzenli bir şekilde organize edebilirsiniz",
+    "welcomeTitle": "WantToDo'ya Hoş Geldiniz",
+    "welcomeMessage": "Devam etmek için lütfen hesabınıza giriş yapın veya yeni bir hesap oluşturun."
+  },
+  "loginRegister": {
+    "hintTextUsername": "Kullanıcı Adınızı Girin",
+    "hintTextPassword": "Şifrenizi Girin",
+    "hintTextConfirmPassword": "Şifrenizi Tekrar Girin",
+    "withGoogle": "Google ile Giriş Yap",
+    "withApple": "Apple ile Giriş",
+    "withFingerPrint": "Parmak İzi ile Giriş",
+    "isAccountNegative": "Hesabınız yok mu? ",
+    "isAccountPositive": "Zaten bir hesabınız var mı? ",
+    "fingerPrintMsg": "Lütfen butona tıklayın ve kimliğinizi doğrulamak için parmağınızı parmak izi tarayıcısında basılı tutun",
+    "useFinger": "Parmak İzi Tarayıcısını Kullan"
+  },
+  "home": {
+    "home": "Home",
+    "emptyListTitle": "Bugün ne yapmak istersiniz?",
+    "emptyListMsg": "Görevlerinizi eklemek için + simgesine tıklayın"
+  },
+  "appSettings": {
+    "changeColor": "Uygulama rengini değiştir",
+    "changeLanguage": "Uygulama dilini değiştir",
+    "import": "İçe Aktar",
+    "importGoogleCalendar": "Google Takvim'den İçe Aktar"
+  },
+  "errorMessages": {
+    "missingOrIncorrect": "Eksik veya hatalı giriş yaptınız!",
+    "emptyOrNotSame": "Lütfen boş alan bırakmayın ve aynı şifreleri girin!"
+  },
+  "login": "Giriş Yap",
+  "register": "Kayıt Ol",
+  "username": "Kullanıcı Adı",
+  "password": "Şifre",
+  "confirmPassword": "Şifreyi Onayla",
+  "skip": "Atla",
+  "back": "Geri",
+  "next": "İleri",
+  "cancel": "İptal Et",
+  "getStarted": "Başlayın",
+  "createAccount": "Hesap Oluştur"
+
+}

@@ -6,10 +6,8 @@ class SettingsProvider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) {
-        return SettingsViewModel();
-      },
-      child: SettingsPage(),
+      create: (context) => SettingsViewModel(),
+      child: const SettingsPage(),
     );
   }
 }

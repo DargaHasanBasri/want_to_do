@@ -45,3 +45,4 @@ export 'package:want_to_do/ui/pages/main_tab/main_tab_view_model.dart';
 export 'package:want_to_do/ui/pages/main_tab/main_tab_provider.dart';
 export 'package:want_to_do/ui/pages/main_tab/components/bottom_app_bar_item.dart';
 export 'package:want_to_do/ui/pages/main_tab/components/add_task_bottom_sheet.dart';
+export 'package:want_to_do/ui/pages/onboarding/onboarding_provider.dart';

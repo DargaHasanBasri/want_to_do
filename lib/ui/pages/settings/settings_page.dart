@@ -140,57 +140,46 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
             'Please Select a Language',
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
-              fontSize: 18,
+              fontSize: 20,
               fontWeight: FontWeight.w500,
             ),
           ),
         ),
-        Consumer<SettingsViewModel>(builder: (context, vm, child) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CustomRadioButton(
-                  isSelected: vm.isSelect,
-                  textTitle: 'English',
-                  onTap: () {},
-                ),
-                SizedBox(width: 20),
-                CustomRadioButton(
-                  isSelected: !vm.isSelect,
-                  textTitle: 'Türkçe',
-                  onTap: () {},
-                ),
-              ],
-            ),
-          );
-        }),
+        Consumer<SettingsViewModel>(
+          builder: (context, vm, child) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  CustomRadioButton(
+                    title: 'English',
+                    value: 'English',
+                    groupValue: vm.selectedLanguage,
+                    onChanged: (String? value) {
+                      vm.changeLanguage(value!);
+                    },
+                  ),
+                  CustomRadioButton(
+                    title: 'Türkçe',
+                    value: 'Türkçe',
+                    groupValue: vm.selectedLanguage,
+                    onChanged: (String? value) {
+                      vm.changeLanguage(value!);
+                    },
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
         Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 8,
-            vertical: 20,
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: CustomButton(
-                  title: LocaleKeys.cancel.locale,
-                  backgroundColor: AppColors.darkGrey,
-                  titleColor: AppColors.lavenderBlue,
-                  onClick: () {},
-                ),
-              ),
-              SizedBox(width: 30),
-              Expanded(
-                child: CustomButton(
-                  title: 'Delete',
-                  backgroundColor: AppColors.lavenderBlue,
-                  titleColor: AppColors.white,
-                  onClick: () {},
-                ),
-              ),
-            ],
+          padding: const EdgeInsets.all(24),
+          child: CustomButton(
+            title: 'Okey',
+            backgroundColor: AppColors.lavenderBlue,
+            titleColor: AppColors.white,
+            onClick: () {},
           ),
         ),
       ],

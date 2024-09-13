@@ -1,47 +1,39 @@
 import 'package:want_to_do/export.dart';
 
 class CustomRadioButton extends StatelessWidget {
-  final VoidCallback onTap;
-  final String textTitle;
-  final bool isSelected;
+  final String title;
+  final String value;
+  final String groupValue;
+  final ValueChanged<String?> onChanged;
 
   const CustomRadioButton({
-    super.key,
-    required this.isSelected,
-    required this.textTitle,
-    required this.onTap,
-  });
+    Key? key,
+    required this.title,
+    required this.value,
+    required this.groupValue,
+    required this.onChanged,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => onTap.call(),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            padding: EdgeInsets.all(4),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: AppColors.white,
-            ),
-            child: CircleAvatar(
-              radius: 8,
-              backgroundColor:
-                  isSelected ? AppColors.appleGreen : AppColors.white,
-            ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Radio<String>(
+          value: value,
+          groupValue: groupValue,
+          onChanged: onChanged,
+          activeColor: AppColors.lavenderBlue,
+        ),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            color: AppColors.white.withOpacity(0.87)
           ),
-          SizedBox(width: 8),
-          Text(
-            textTitle,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-              color: AppColors.white.withOpacity(0.87),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

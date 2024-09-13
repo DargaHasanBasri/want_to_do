@@ -40,3 +40,6 @@ export 'package:want_to_do/utils/string_localization_ext.dart';
 export 'package:want_to_do/ui/pages/settings/settings_page.dart';
 export 'package:want_to_do/ui/pages/settings/settings_view_model.dart';
 export 'package:want_to_do/ui/pages/settings/settings_provider.dart';
+export 'package:want_to_do/ui/pages/main_tab/main_tab_page.dart';
+export 'package:want_to_do/ui/pages/main_tab/main_tab_view_model.dart';
+export 'package:want_to_do/ui/pages/main_tab/main_tab_provider.dart';

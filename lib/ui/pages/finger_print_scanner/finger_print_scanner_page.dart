@@ -50,8 +50,10 @@ class _FingerPrintScannerPageState
                 SizedBox(height: 30),
                 CustomTextFormField(
                   controller: _controllerPassword,
+                  textFieldBgColor: AppColors.darkJungleGreen,
                   textFieldName: 'Password',
                   hintText: 'Enter your Password',
+                  hintTextColor: AppColors.davyGrey,
                   isHaveObscure: true,
                   onChanged: (String text) {
                     vm.passwordText = _controllerPassword.text;

@@ -58,6 +58,8 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
               ),
               CustomTextFormField(
                 controller: _controllerUserName,
+                textFieldBgColor: AppColors.darkJungleGreen,
+                hintTextColor: AppColors.davyGrey,
                 textFieldName: 'Username',
                 hintText: 'Enter your Username',
                 onChanged: (String text) {
@@ -67,6 +69,8 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
               SizedBox(height: 26),
               CustomTextFormField(
                 controller: _controllerPassword,
+                textFieldBgColor: AppColors.darkJungleGreen,
+                hintTextColor: AppColors.davyGrey,
                 textFieldName: 'Password',
                 hintText: 'Enter your Password',
                 isHaveObscure: true,
@@ -77,6 +81,8 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
               SizedBox(height: 26),
               CustomTextFormField(
                 controller: _controllerConfirmPassword,
+                textFieldBgColor: AppColors.darkJungleGreen,
+                hintTextColor: AppColors.davyGrey,
                 textFieldName: 'Confirm Password',
                 hintText: 'Re-Enter your Password',
                 isHaveObscure: true,

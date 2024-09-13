@@ -56,6 +56,8 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
               ),
               CustomTextFormField(
                 controller: _controllerUserName,
+                textFieldBgColor: AppColors.darkJungleGreen,
+                hintTextColor: AppColors.davyGrey,
                 textFieldName: 'Username',
                 hintText: 'Enter your Username',
                 onChanged: (String text) {
@@ -65,6 +67,8 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
               SizedBox(height: 26),
               CustomTextFormField(
                 controller: _controllerPassword,
+                textFieldBgColor: AppColors.darkJungleGreen,
+                hintTextColor: AppColors.davyGrey,
                 textFieldName: 'Password',
                 hintText: 'Enter your Password',
                 isHaveObscure: true,

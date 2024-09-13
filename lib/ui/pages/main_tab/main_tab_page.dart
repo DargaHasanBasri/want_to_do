@@ -1,5 +1,4 @@
 import 'package:want_to_do/export.dart';
-import 'package:want_to_do/ui/pages/main_tab/components/bottom_app_bar_item.dart';
 
 class MainTabPage extends StatefulWidget {
   const MainTabPage({super.key});
@@ -8,14 +7,22 @@ class MainTabPage extends StatefulWidget {
   State<MainTabPage> createState() => _MainTabPageState();
 }
 
-class _MainTabPageState extends State<MainTabPage> {
+class _MainTabPageState extends BaseStatefulState<MainTabPage> {
+  final TextEditingController taskController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       extendBody: true,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showCustomBottomSheet(
+            context: context,
+            child: AddTaskBottomSheet(
+              taskTitleController: taskController,
+            ),
+          );
+        },
         shape: CircleBorder(eccentricity: 1),
         child: _buildFloatingActionButton(),
       ),
@@ -24,7 +31,7 @@ class _MainTabPageState extends State<MainTabPage> {
         padding: EdgeInsets.zero,
         color: AppColors.darkGrey,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: _buildNavigationBar(),
         ),
       ),

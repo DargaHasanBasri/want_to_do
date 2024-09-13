@@ -1,15 +1,13 @@
-import 'dart:ui';
-
-import 'package:easy_localization/easy_localization.dart';
 import 'package:want_to_do/base/base_view_model.dart';
 
 class SettingsViewModel extends BaseViewModel {
-  bool _isSelect = false;
+  String _selectedLanguage = 'English';
 
-  set isSelect(bool value) {
-    _isSelect = value;
+  void changeLanguage(String newLanguage) {
+    _selectedLanguage = newLanguage;
     notifyListeners();
   }
 
-  bool get isSelect => _isSelect;
+  String get selectedLanguage => _selectedLanguage;
+
 }

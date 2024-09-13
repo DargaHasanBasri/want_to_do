@@ -32,9 +32,14 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
   }) {
     showModalBottomSheet<void>(
       context: context,
-      isDismissible: false,
+      isScrollControlled: true,
       builder: (context) {
-        return child;
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+          ),
+          child: child,
+        );
       },
     );
   }

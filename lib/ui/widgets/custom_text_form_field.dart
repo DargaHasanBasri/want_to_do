@@ -1,6 +1,6 @@
 import 'package:want_to_do/export.dart';
 
-class CustomTextFormField extends StatefulWidget {
+class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     required this.controller,
     super.key,
@@ -10,6 +10,8 @@ class CustomTextFormField extends StatefulWidget {
     bool? multiline,
     TextInputType? inputType,
     Color? textFieldBgColor,
+    Color? hintTextColor,
+    TextInputAction? textInputAction,
     this.isEnabled,
     this.onChanged,
     this.onObscureChanged,
@@ -17,9 +19,11 @@ class CustomTextFormField extends StatefulWidget {
     this.isRequired = false,
     this.isHaveObscure = false,
   })  : inputType = inputType ?? TextInputType.text,
+        textInputAction = textInputAction ?? TextInputAction.next,
         textFieldBgColor = textFieldBgColor ?? Colors.transparent,
         textFieldTitle = textFieldName ?? '',
         hintText = hintText ?? '',
+        hintTextColor = hintTextColor ?? AppColors.white,
         borderRadius = borderRadius ?? 4,
         isAutoTrue = isAutoTrue ?? false,
         multiline = multiline ?? false;
@@ -33,25 +37,23 @@ class CustomTextFormField extends StatefulWidget {
   final bool? multiline;
   final TextInputType inputType;
   final Color textFieldBgColor;
+  final Color hintTextColor;
   final bool? isAutoTrue;
   final bool isRequired;
   final bool isHaveObscure;
+  final TextInputAction? textInputAction;
 
-  @override
-  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
-}
-
-class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         getTextFieldTitle(),
         TextFormField(
-          controller: widget.controller,
-          obscureText: widget.isHaveObscure,
-          autofocus: widget.isAutoTrue ?? false,
-          keyboardType: widget.inputType,
+          controller: controller,
+          obscureText: isHaveObscure,
+          autofocus: isAutoTrue ?? false,
+          keyboardType: inputType,
+          textInputAction: textInputAction,
           onChanged: _onChanged,
           style: const TextStyle(
             color: AppColors.white,
@@ -59,34 +61,34 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             fontWeight: FontWeight.w400,
           ),
           decoration: InputDecoration(
-            hintText: widget.hintText,
+            hintText: hintText,
             hintStyle: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w400,
-              color: AppColors.davyGrey,
+              color: hintTextColor.withOpacity(0.7),
             ),
             filled: true,
-            fillColor: AppColors.darkJungleGreen,
+            fillColor: textFieldBgColor,
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 12,
               vertical: 16,
             ),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(widget.borderRadius),
+              borderRadius: BorderRadius.circular(borderRadius),
               borderSide: BorderSide(
                 color: AppColors.mountainMist,
                 width: 1,
               ),
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(widget.borderRadius),
+              borderRadius: BorderRadius.circular(borderRadius),
               borderSide: const BorderSide(
                 color: AppColors.mountainMist,
                 width: 1,
               ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(widget.borderRadius),
+              borderRadius: BorderRadius.circular(borderRadius),
               borderSide: BorderSide(
                 color: AppColors.mountainMist,
                 width: 1,
@@ -99,13 +101,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   }
 
   Widget getTextFieldTitle() {
-    if (widget.textFieldTitle.isNotEmpty) {
+    if (textFieldTitle.isNotEmpty) {
       return Padding(
         padding: const EdgeInsets.only(bottom: 8),
         child: Row(
           children: [
             Text(
-              widget.textFieldTitle,
+              textFieldTitle,
               style: TextStyle(
                 fontSize: 16,
                 color: AppColors.white.withOpacity(0.87),
@@ -113,7 +115,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
               ),
             ),
             const SizedBox(width: 6),
-            if (widget.isRequired)
+            if (isRequired)
               Text(
                 '*',
                 style: TextStyle(
@@ -129,8 +131,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   }
 
   void _onChanged(String value) {
-    if (widget.onChanged != null) {
-      widget.onChanged?.call(value.trim());
+    if (onChanged != null) {
+      onChanged?.call(value.trim());
     }
   }
 }

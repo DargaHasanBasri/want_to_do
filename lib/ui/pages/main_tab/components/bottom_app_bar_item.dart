@@ -15,10 +15,10 @@ class BottomAppBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(40),
+      borderRadius: BorderRadius.circular(30),
       child: Material(
         color: Colors.transparent,
-        borderRadius: BorderRadius.circular(40),
+        borderRadius: BorderRadius.circular(30),
         child: InkWell(
           radius: 40,
           splashColor: Colors.white.withOpacity(0.3),
@@ -33,7 +33,7 @@ class BottomAppBarItem extends StatelessWidget {
                 SizedBox(height: 10),
                 Expanded(
                   child: CircleAvatar(
-                    radius: 40,
+                    radius: 30,
                     backgroundColor: Colors.transparent,
                     child: Image.asset(
                       'assets/images/${iconName}.png',

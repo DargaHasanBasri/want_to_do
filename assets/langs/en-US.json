@@ -4,6 +4,21 @@
   "focus": "Focus",
   "profile": "Profile",
   "settings": "Settings",
+  "completed": "Completed",
+  "today": "Today",
+  "searchHintText": "Search for your task...",
+  "login": "Login",
+  "register": "Register",
+  "username": "Username",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "skip": "Skip",
+  "back": "Back",
+  "next": "Next",
+  "cancel": "Cancel",
+  "getStarted": "Get Started",
+  "createAccount": "Create Account",
+  "todayAt": "Today At",
   "onboarding": {
     "onboardingTitleFirst": "Manage your tasks",
     "onboardingMsgFirst": "You can easily manage all of your daily tasks in WantTODO for free",
@@ -40,16 +55,5 @@
   "errorMessages": {
     "missingOrIncorrect": "You have entered incompletely or incorrectly!",
     "emptyOrNotSame": "Please do not leave any empty fields and enter the same passwords!"
-  },
-  "login": "Login",
-  "register": "Register",
-  "username": "Username",
-  "password": "Password",
-  "confirmPassword": "Confirm Password",
-  "skip": "Skip",
-  "back": "Back",
-  "next": "Next",
-  "cancel": "Cancel",
-  "getStarted": "Get Started",
-  "createAccount": "Create Account"
+  }
 }

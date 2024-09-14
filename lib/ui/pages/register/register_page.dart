@@ -60,7 +60,7 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                 controller: _controllerUserName,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldName: 'Username',
+                textFieldTitle: 'Username',
                 hintText: 'Enter your Username',
                 onChanged: (String text) {
                   vm.usernameText = _controllerUserName.text;
@@ -71,7 +71,7 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                 controller: _controllerPassword,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldName: 'Password',
+                textFieldTitle: 'Password',
                 hintText: 'Enter your Password',
                 isHaveObscure: true,
                 onChanged: (String text) {
@@ -83,7 +83,7 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                 controller: _controllerConfirmPassword,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldName: 'Confirm Password',
+                textFieldTitle: 'Confirm Password',
                 hintText: 'Re-Enter your Password',
                 isHaveObscure: true,
                 onChanged: (String text) {

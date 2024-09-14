@@ -58,7 +58,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                 controller: _controllerUserName,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldName: 'Username',
+                textFieldTitle: 'Username',
                 hintText: 'Enter your Username',
                 onChanged: (String text) {
                   vm.usernameText = _controllerUserName.text;
@@ -69,7 +69,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                 controller: _controllerPassword,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldName: 'Password',
+                textFieldTitle: 'Password',
                 hintText: 'Enter your Password',
                 isHaveObscure: true,
                 onChanged: (String text) {

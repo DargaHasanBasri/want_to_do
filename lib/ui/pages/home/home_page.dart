@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -8,6 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends BaseStatefulState<HomePage> {
+  final TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +23,64 @@ class _HomePageState extends BaseStatefulState<HomePage> {
     return SafeArea(
       child: Padding(
         padding: AppPaddings.pagePaddingHorizontal,
-        child: EmptyList(),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: CustomTextFormField(
+                controller: searchController,
+                textFieldBgColor: AppColors.darkJungleGreen,
+                isPrefixIcon: true,
+                prefixIconAddress: 'assets/images/ic_search.png',
+                hintText: LocaleKeys.searchHintText.locale,
+                hintTextColor: AppColors.silverChalice,
+              ),
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _dayDropdownButton(),
+                    SizedBox(height: 20),
+                    TaskListItem(),
+                    SizedBox(height: 20),
+                    _dayDropdownButton(),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container _dayDropdownButton() {
+    return Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: AppColors.blackFel,
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            LocaleKeys.today.locale,
+            style: TextStyle(
+              color: AppColors.white.withOpacity(0.87),
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          SizedBox(width: 10),
+          Image.asset(
+            'assets/images/ic_arrow_down.png',
+            width: 16,
+            height: 16,
+          ),
+        ],
       ),
     );
   }
@@ -31,7 +90,7 @@ class _HomePageState extends BaseStatefulState<HomePage> {
       backgroundColor: AppColors.backgroundColor,
       forceMaterialTransparency: true,
       title: Text(
-        'Home',
+        LocaleKeys.home_home.locale,
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w400,
@@ -50,7 +109,7 @@ class _HomePageState extends BaseStatefulState<HomePage> {
       actions: [
         Padding(
           padding: const EdgeInsets.only(
-            right: 10,
+            right: 8,
             top: 8,
           ),
           child: CustomUserAvatar(

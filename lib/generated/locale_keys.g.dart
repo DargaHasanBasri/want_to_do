@@ -6,6 +6,21 @@ abstract class  LocaleKeys {
   static const focus = 'focus';
   static const profile = 'profile';
   static const settings = 'settings';
+  static const completed = 'completed';
+  static const today = 'today';
+  static const searchHintText = 'searchHintText';
+  static const login = 'login';
+  static const register = 'register';
+  static const username = 'username';
+  static const password = 'password';
+  static const confirmPassword = 'confirmPassword';
+  static const skip = 'skip';
+  static const back = 'back';
+  static const next = 'next';
+  static const cancel = 'cancel';
+  static const getStarted = 'getStarted';
+  static const createAccount = 'createAccount';
+  static const todayAt = 'todayAt';
   static const onboarding_onboardingTitleFirst = 'onboarding.onboardingTitleFirst';
   static const onboarding_onboardingMsgFirst = 'onboarding.onboardingMsgFirst';
   static const onboarding_onboardingTitleSecond = 'onboarding.onboardingTitleSecond';
@@ -38,16 +53,5 @@ abstract class  LocaleKeys {
   static const errorMessages_missingOrIncorrect = 'errorMessages.missingOrIncorrect';
   static const errorMessages_emptyOrNotSame = 'errorMessages.emptyOrNotSame';
   static const errorMessages = 'errorMessages';
-  static const login = 'login';
-  static const register = 'register';
-  static const username = 'username';
-  static const password = 'password';
-  static const confirmPassword = 'confirmPassword';
-  static const skip = 'skip';
-  static const back = 'back';
-  static const next = 'next';
-  static const cancel = 'cancel';
-  static const getStarted = 'getStarted';
-  static const createAccount = 'createAccount';
 
 }

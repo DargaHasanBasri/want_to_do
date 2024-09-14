@@ -4,44 +4,43 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     required this.controller,
     super.key,
-    String? hintText,
-    String? textFieldName,
-    double? borderRadius,
-    bool? multiline,
     TextInputType? inputType,
+    TextInputAction? textInputAction,
+    String? hintText,
+    String? textFieldTitle,
+    String? prefixIconAddress,
+    double? borderRadius,
     Color? textFieldBgColor,
     Color? hintTextColor,
-    TextInputAction? textInputAction,
-    this.isEnabled,
-    this.onChanged,
-    this.onObscureChanged,
     bool? isAutoTrue,
+    bool? isPrefixIcon,
+    this.onChanged,
     this.isRequired = false,
     this.isHaveObscure = false,
   })  : inputType = inputType ?? TextInputType.text,
         textInputAction = textInputAction ?? TextInputAction.next,
         textFieldBgColor = textFieldBgColor ?? Colors.transparent,
-        textFieldTitle = textFieldName ?? '',
+        textFieldTitle = textFieldTitle ?? '',
         hintText = hintText ?? '',
+        prefixIconAddress = prefixIconAddress ?? 'assets/images/ic_flag.png',
         hintTextColor = hintTextColor ?? AppColors.white,
         borderRadius = borderRadius ?? 4,
         isAutoTrue = isAutoTrue ?? false,
-        multiline = multiline ?? false;
+        isPrefixIcon = isPrefixIcon ?? false;
   final TextEditingController controller;
+  final TextInputType inputType;
+  final TextInputAction textInputAction;
   final String hintText;
   final String textFieldTitle;
-  final double borderRadius;
+  final String prefixIconAddress;
   final Function? onChanged;
-  final Function? onObscureChanged;
-  final bool? isEnabled;
-  final bool? multiline;
-  final TextInputType inputType;
+  final double borderRadius;
   final Color textFieldBgColor;
   final Color hintTextColor;
-  final bool? isAutoTrue;
+  final bool isAutoTrue;
+  final bool isPrefixIcon;
   final bool isRequired;
   final bool isHaveObscure;
-  final TextInputAction? textInputAction;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +50,7 @@ class CustomTextFormField extends StatelessWidget {
         TextFormField(
           controller: controller,
           obscureText: isHaveObscure,
-          autofocus: isAutoTrue ?? false,
+          autofocus: isAutoTrue,
           keyboardType: inputType,
           textInputAction: textInputAction,
           onChanged: _onChanged,
@@ -61,6 +60,7 @@ class CustomTextFormField extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
           decoration: InputDecoration(
+            prefixIcon: isPrefixIcon ? Image.asset(prefixIconAddress) : null,
             hintText: hintText,
             hintStyle: TextStyle(
               fontSize: 16,

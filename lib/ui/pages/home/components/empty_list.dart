@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class EmptyList extends StatelessWidget {
   const EmptyList({super.key});
@@ -12,7 +13,7 @@ class EmptyList extends StatelessWidget {
           child: Image.asset('assets/images/img_checklist.png'),
         ),
         Text(
-          'What do you want to do today?',
+          LocaleKeys.home_emptyListTitle.locale,
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w400,
@@ -23,7 +24,7 @@ class EmptyList extends StatelessWidget {
           maxLines: 3,
         ),
         Text(
-          'Tap + to add your tasks',
+          LocaleKeys.home_emptyListMsg.locale,
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w400,

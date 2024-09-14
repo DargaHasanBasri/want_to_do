@@ -4,6 +4,21 @@
   "focus": "Odaklanma",
   "profile": "Profil",
   "settings": "Ayarlar",
+  "completed": "Tamamlandı",
+  "today": "Bugün",
+  "searchHintText": "Görevler içinde ara...",
+  "login": "Giriş Yap",
+  "register": "Kayıt Ol",
+  "username": "Kullanıcı Adı",
+  "password": "Şifre",
+  "confirmPassword": "Şifreyi Onayla",
+  "skip": "Atla",
+  "back": "Geri",
+  "next": "İleri",
+  "cancel": "İptal Et",
+  "getStarted": "Başlayın",
+  "createAccount": "Hesap Oluştur",
+  "todayAt": "Bugün",
   "onboarding": {
     "onboardingTitleFirst": "Görevlerinizi yönetin",
     "onboardingMsgFirst": "WantToDo ile tüm günlük görevlerinizi ücretsiz olarak kolayca yönetebilirsiniz",
@@ -40,17 +55,5 @@
   "errorMessages": {
     "missingOrIncorrect": "Eksik veya hatalı giriş yaptınız!",
     "emptyOrNotSame": "Lütfen boş alan bırakmayın ve aynı şifreleri girin!"
-  },
-  "login": "Giriş Yap",
-  "register": "Kayıt Ol",
-  "username": "Kullanıcı Adı",
-  "password": "Şifre",
-  "confirmPassword": "Şifreyi Onayla",
-  "skip": "Atla",
-  "back": "Geri",
-  "next": "İleri",
-  "cancel": "İptal Et",
-  "getStarted": "Başlayın",
-  "createAccount": "Hesap Oluştur"
-
+  }
 }

@@ -17,11 +17,14 @@ Future<void> main() async {
       ],
       path: AppLocaleConstant.LANG_PATH,
       fallbackLocale: AppLocaleConstant.EN_LOCALE,
-      child: MultiProvider(providers: [
-        ChangeNotifierProvider(
-          create: (_) => SettingsViewModel(),
-        ),
-      ], child: const MyApp()),
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (_) => SettingsViewModel(),
+          ),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SettingsProvider(),
+      home: HomeProvider(),
     );
   }
 }

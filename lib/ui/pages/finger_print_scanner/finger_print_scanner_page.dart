@@ -51,7 +51,7 @@ class _FingerPrintScannerPageState
                 CustomTextFormField(
                   controller: _controllerPassword,
                   textFieldBgColor: AppColors.darkJungleGreen,
-                  textFieldName: 'Password',
+                  textFieldTitle: 'Password',
                   hintText: 'Enter your Password',
                   hintTextColor: AppColors.davyGrey,
                   isHaveObscure: true,

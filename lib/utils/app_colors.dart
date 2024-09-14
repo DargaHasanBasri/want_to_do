@@ -6,10 +6,12 @@ final class AppColors {
   static const Color backgroundColor = const Color(0xff121212);
   static const Color black = const Color(0xff000000);
   static const Color white = const Color(0xffFFFFFF);
+  static const Color greenWhite = const Color(0xffE8E8E8);
   static const Color crocusPurple = const Color(0xff8875FF);
   static const Color lightRed = const Color(0xffFF4949);
   static const Color lavenderBlue = const Color(0xff8687E7);
   static const Color darkGrey = const Color(0xff363636);
+  static const Color blackFel = const Color(0xff444444);
   static const Color davyGrey = const Color(0xff535353);
   static const Color darkJungleGreen = const Color(0xff1D1D1D);
   static const Color mountainMist = const Color(0xff979797);

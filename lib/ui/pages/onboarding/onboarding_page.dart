@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -34,7 +35,7 @@ class _OnboardingPageState extends BaseStatefulState<OnboardingPage> {
           Padding(
             padding: EdgeInsets.only(top: 14, left: 14),
             child: CustomTextButton(
-              title: 'SKIP',
+              title: LocaleKeys.skip.locale,
               titleColor: AppColors.white.withOpacity(0.44),
               onPress: () {
                 if (_vm.currentPage < 2) {
@@ -47,7 +48,6 @@ class _OnboardingPageState extends BaseStatefulState<OnboardingPage> {
               },
             ),
           ),
-          SizedBox(height: 50),
           CustomCurrentPageBar(currentPage: _vm.currentPage),
           SizedBox(height: 50),
           Expanded(
@@ -76,7 +76,7 @@ class _OnboardingPageState extends BaseStatefulState<OnboardingPage> {
               children: [
                 Expanded(
                   child: CustomTextButton(
-                    title: 'BACK',
+                    title: LocaleKeys.back.locale,
                     titleColor: AppColors.white.withOpacity(0.44),
                     onPress: () {
                       if (_vm.currentPage > 0) {
@@ -91,7 +91,9 @@ class _OnboardingPageState extends BaseStatefulState<OnboardingPage> {
                 SizedBox(width: 50),
                 Expanded(
                   child: CustomButton(
-                    title: _vm.currentPage != 2 ? 'NEXT' : 'GET STARTED',
+                    title: _vm.currentPage != 2
+                        ? LocaleKeys.next.locale
+                        : LocaleKeys.getStarted.locale,
                     onClick: () {
                       if (_vm.currentPage < 2) {
                         _pageController.nextPage(

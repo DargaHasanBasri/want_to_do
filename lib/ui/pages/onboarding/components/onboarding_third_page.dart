@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class OnboardingThirdPage extends StatelessWidget {
   const OnboardingThirdPage({super.key});
@@ -7,24 +8,27 @@ class OnboardingThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/images/img_onboarding_third.png'),
+        AspectRatio(
+          aspectRatio: 16 / 9,
+          child: Image.asset('assets/images/img_onboarding_third.png'),
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 50, bottom: 42),
+          padding: const EdgeInsets.only(top: 50, bottom: 20),
           child: Text(
-            'Organize your tasks',
+            LocaleKeys.onboarding_onboardingTitleThird.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 32,
               fontWeight: FontWeight.w700,
             ),
             textAlign: TextAlign.center,
-            maxLines: 2,
+            maxLines: 3,
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Text(
-            'You can organize your daily tasks by adding your tasks into separate categories',
+            LocaleKeys.onboarding_onboardingMsgThird.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 16,
@@ -32,7 +36,7 @@ class OnboardingThirdPage extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             textAlign: TextAlign.center,
-            maxLines: 2,
+            maxLines: 3
           ),
         ),
       ],

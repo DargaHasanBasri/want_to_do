@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class OnboardingSecondPage extends StatelessWidget {
   const OnboardingSecondPage({super.key});
@@ -7,24 +8,27 @@ class OnboardingSecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/images/img_onboarding_second.png'),
+        AspectRatio(
+          aspectRatio: 16 / 9,
+          child: Image.asset('assets/images/img_onboarding_second.png'),
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 50, bottom: 42),
+          padding: const EdgeInsets.only(top: 50, bottom: 20),
           child: Text(
-            'Create daily routine',
+            LocaleKeys.onboarding_onboardingTitleSecond.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 32,
               fontWeight: FontWeight.w700,
             ),
             textAlign: TextAlign.center,
-            maxLines: 2,
+            maxLines: 3,
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Text(
-            'In WantToDo you can create your personalized routine to stay productive',
+            LocaleKeys.onboarding_onboardingMsgSecond.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 16,
@@ -32,7 +36,7 @@ class OnboardingSecondPage extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             textAlign: TextAlign.center,
-            maxLines: 2,
+            maxLines: 3,
           ),
         ),
       ],

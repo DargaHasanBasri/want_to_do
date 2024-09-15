@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class OnboardingFirstPage extends StatelessWidget {
   const OnboardingFirstPage({super.key});
@@ -7,24 +8,27 @@ class OnboardingFirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/images/img_onboarding_first.png'),
+        AspectRatio(
+          aspectRatio: 16 / 9,
+          child: Image.asset('assets/images/img_onboarding_first.png'),
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 50, bottom: 42),
+          padding: const EdgeInsets.only(top: 50, bottom: 20),
           child: Text(
-            'Manage your tasks',
+            LocaleKeys.onboarding_onboardingTitleFirst.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 32,
               fontWeight: FontWeight.w700,
             ),
             textAlign: TextAlign.center,
-            maxLines: 2,
+            maxLines: 3,
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Text(
-            'You can easily manage all of your daily tasks in DoMe for free',
+            LocaleKeys.onboarding_onboardingMsgFirst.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 16,
@@ -32,7 +36,7 @@ class OnboardingFirstPage extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             textAlign: TextAlign.center,
-            maxLines: 2,
+            maxLines: 3,
           ),
         ),
       ],

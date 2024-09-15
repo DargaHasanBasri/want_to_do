@@ -17,14 +17,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
       appBar: AppBar(
         backgroundColor: AppColors.backgroundColor,
         forceMaterialTransparency: true,
-        leading: IconButton(
-          padding: EdgeInsets.zero,
-          onPressed: () {},
-          icon: Image.asset(
-            'assets/images/ic_arrow_back_left.png',
-            color: AppColors.white,
-          ),
-        ),
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: AppColors.backgroundColor,
       body: _buildBody(context),
@@ -81,7 +74,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                 title: 'LOGIN',
                 onClick: () {
                   vm.buttonIsActive()
-                      ? SizedBox()
+                      ? appRoutes.navigateToReplacement(Routes.MainTab)
                       : showToastMessage(
                           'Eksik veya hatalı giriş yaptınız!',
                         );
@@ -130,7 +123,10 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                         ),
-                        recognizer: TapGestureRecognizer()..onTap = () {},
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            appRoutes.navigateTo(Routes.Register);
+                          },
                       ),
                     ],
                   ),

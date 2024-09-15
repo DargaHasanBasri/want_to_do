@@ -21,7 +21,9 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
         forceMaterialTransparency: true,
         leading: IconButton(
           padding: EdgeInsets.zero,
-          onPressed: () {},
+          onPressed: () {
+            appRoutes.popIfBackStackNotEmpty();
+          },
           icon: Image.asset(
             'assets/images/ic_arrow_back_left.png',
             color: AppColors.white,
@@ -144,7 +146,9 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                         ),
-                        recognizer: TapGestureRecognizer()..onTap = () {},
+                        recognizer: TapGestureRecognizer()..onTap = () {
+                          appRoutes.navigateToReplacement(Routes.Login);
+                        },
                       ),
                     ],
                   ),

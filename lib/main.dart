@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:want_to_do/services/service.locator.dart';
 import 'export.dart';
 
 Future<void> main() async {
@@ -9,6 +10,7 @@ Future<void> main() async {
       statusBarColor: Colors.transparent,
     ),
   );
+  await setupLocator();
   runApp(
     EasyLocalization(
       supportedLocales: [
@@ -40,11 +42,16 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
+      navigatorKey: locator<AppRoutes>().baseNavigatorKey,
+      onGenerateRoute: Routes.generateRoute,
+      initialRoute: Routes.Splash,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeProvider(),
+      builder: (context, widget) {
+        return widget!;
+      },
     );
   }
 }

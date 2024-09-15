@@ -1,9 +1,14 @@
+export 'dart:async';
 export 'package:flutter/material.dart';
 export 'package:flutter/services.dart';
 export 'package:flutter/gestures.dart';
 export 'package:provider/provider.dart';
+export 'package:get_it/get_it.dart';
+export 'package:want_to_do/routes/routes.dart';
+export 'package:want_to_do/routes/app_routes.dart';
 export 'package:want_to_do/utils/app_colors.dart';
 export 'package:want_to_do/utils/app_paddings.dart';
+export 'package:want_to_do/services/localStorageService.dart';
 export 'package:want_to_do/ui/pages/login/login_provider.dart';
 export 'package:want_to_do/base/base_stateful_state.dart';
 export 'package:want_to_do/ui/pages/login/login_view_model.dart';
@@ -47,3 +52,6 @@ export 'package:want_to_do/ui/pages/main_tab/components/bottom_app_bar_item.dart
 export 'package:want_to_do/ui/pages/main_tab/components/add_task_bottom_sheet.dart';
 export 'package:want_to_do/ui/pages/onboarding/onboarding_provider.dart';
 export 'package:want_to_do/ui/pages/home/components/task_list_item.dart';
+export 'package:want_to_do/ui/pages/splash/splash_page.dart';
+export 'package:want_to_do/ui/pages/splash/splash_view_model.dart';
+export 'package:want_to_do/ui/pages/splash/splash_provider.dart';

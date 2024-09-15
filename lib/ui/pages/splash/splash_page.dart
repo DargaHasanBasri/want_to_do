@@ -1,8 +1,18 @@
 import 'package:want_to_do/export.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends BaseStatefulState<SplashPage> {
+  @override
+  void initState() {
+    waitAndNavigate(context);
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +40,9 @@ class SplashPage extends StatelessWidget {
   Future<void> waitAndNavigate(BuildContext context) async {
     await Future.delayed(
       const Duration(seconds: 2),
-      () {},
+      () {
+        appRoutes.navigateToReplacement(Routes.Onboarding);
+      },
     );
   }
 }

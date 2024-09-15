@@ -98,6 +98,8 @@ class _OnboardingPageState extends BaseStatefulState<OnboardingPage> {
                           duration: const Duration(milliseconds: 300),
                           curve: Curves.ease,
                         );
+                      } else {
+                        appRoutes.navigateRemoveUntil(Routes.Login);
                       }
                     },
                   ),

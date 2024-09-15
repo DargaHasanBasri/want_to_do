@@ -1,7 +1,10 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/services/service.locator.dart';
 import 'package:want_to_do/utils/utility.dart';
 
 abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
+  final AppRoutes appRoutes = locator<AppRoutes>();
+  LocalStorageService localStorage = LocalStorageService();
   late FToast fToast;
 
   @override

@@ -62,5 +62,14 @@
   "errorMessages": {
     "missingOrIncorrect": "Eksik veya hatalı giriş yaptınız!",
     "emptyOrNotSame": "Lütfen boş alan bırakmayın ve aynı şifreleri girin!"
+  },
+  "category": {
+    "categoryTitle": "Yeni Kategori Oluştur",
+    "categoryName": "Kategori isim:",
+    "categoryNameHintText": "Kategori isim gir",
+    "categoryIcon": "Kategori ikon:",
+    "chooseIconFromLibrary": "Kütüphaneden ikon seç",
+    "categoryColor": "Kategori Renk:",
+    "createCategory": "Kategori Oluştur"
   }
 }

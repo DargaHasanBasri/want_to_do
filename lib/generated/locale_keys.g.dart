@@ -60,5 +60,13 @@ abstract class  LocaleKeys {
   static const errorMessages_missingOrIncorrect = 'errorMessages.missingOrIncorrect';
   static const errorMessages_emptyOrNotSame = 'errorMessages.emptyOrNotSame';
   static const errorMessages = 'errorMessages';
+  static const category_categoryTitle = 'category.categoryTitle';
+  static const category_categoryName = 'category.categoryName';
+  static const category_categoryNameHintText = 'category.categoryNameHintText';
+  static const category_categoryIcon = 'category.categoryIcon';
+  static const category_chooseIconFromLibrary = 'category.chooseIconFromLibrary';
+  static const category_categoryColor = 'category.categoryColor';
+  static const category_createCategory = 'category.createCategory';
+  static const category = 'category';
 
 }

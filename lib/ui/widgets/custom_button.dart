@@ -41,6 +41,13 @@ class CustomButton extends StatelessWidget {
                 color: borderColor ?? Colors.transparent,
                 width: 2,
               ),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.black.withOpacity(0.25),
+                  offset: Offset(0, 4),
+                  blurRadius: 4,
+                ),
+              ],
               borderRadius: BorderRadius.circular(borderRadius ?? 4.0),
             ),
             child: Padding(
@@ -81,7 +88,7 @@ class CustomButton extends StatelessWidget {
         ),
       );
     } else {
-      return const SizedBox();
+      return SizedBox();
     }
   }
 }

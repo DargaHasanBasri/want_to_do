@@ -59,3 +59,6 @@ export 'package:want_to_do/ui/pages/splash/splash_provider.dart';
 export 'package:want_to_do/ui/pages/settings/components/settings_item.dart';
 export 'package:want_to_do/ui/widgets/custom_popup.dart';
 export 'package:want_to_do/ui/widgets/custom_radio_button.dart';
+export 'package:want_to_do/ui/pages/category/category_page.dart';
+export 'package:want_to_do/ui/pages/category/category_view_model.dart';
+export 'package:want_to_do/ui/pages/category/category_provider.dart';

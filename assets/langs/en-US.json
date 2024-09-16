@@ -62,5 +62,14 @@
   "errorMessages": {
     "missingOrIncorrect": "You have entered incompletely or incorrectly!",
     "emptyOrNotSame": "Please do not leave any empty fields and enter the same passwords!"
+  },
+  "category": {
+    "categoryTitle": "Create new category",
+    "categoryName": "Category name:",
+    "categoryNameHintText": "Enter category name",
+    "categoryIcon": "Category icon:",
+    "chooseIconFromLibrary": "Choose icon from library",
+    "categoryColor": "Category color:",
+    "createCategory": "Create Category"
   }
 }

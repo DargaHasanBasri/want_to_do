@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class MainTabPage extends StatefulWidget {
   const MainTabPage({super.key});
@@ -50,7 +51,7 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
         color: AppColors.lavenderBlue,
         shape: BoxShape.circle,
       ),
-      child: Image.asset('assets/images/ic_plus_add.png'),
+      child: Image.asset(AppAssets.icPlusAddPath),
     );
   }
 
@@ -61,37 +62,38 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             BottomAppBarItem(
-              iconName:
-                  vm.currentIndex == 0 ? 'ic_active_home' : 'ic_inactive_home',
-              pageName: 'Home',
+              iconAddress: vm.currentIndex == 0
+                  ? AppAssets.icActiveHomePath
+                  : AppAssets.icInactiveHomePath,
+              pageName: LocaleKeys.home_home.locale,
               onTap: () {
                 vm.currentIndex = 0;
               },
             ),
             BottomAppBarItem(
-              iconName: vm.currentIndex == 1
-                  ? 'ic_active_calendar'
-                  : 'ic_inactive_calendar',
-              pageName: 'Calendar',
+              iconAddress: vm.currentIndex == 1
+                  ? AppAssets.icActiveCalendarPath
+                  : AppAssets.icInactiveCalendarPath,
+              pageName: LocaleKeys.calendar.locale,
               onTap: () {
                 vm.currentIndex = 1;
               },
             ),
             SizedBox(),
             BottomAppBarItem(
-              iconName: vm.currentIndex == 2
-                  ? 'ic_active_focus'
-                  : 'ic_inactive_focus',
-              pageName: 'Focus',
+              iconAddress: vm.currentIndex == 2
+                  ? AppAssets.icActiveFocusPath
+                  : AppAssets.icInactiveFocusPath,
+              pageName: LocaleKeys.focus.locale,
               onTap: () {
                 vm.currentIndex = 2;
               },
             ),
             BottomAppBarItem(
-              iconName: vm.currentIndex == 3
-                  ? 'ic_active_profile'
-                  : 'ic_inactive_profile',
-              pageName: 'Profile',
+              iconAddress: vm.currentIndex == 3
+                  ? AppAssets.icActiveProfilePath
+                  : AppAssets.icInactiveProfilePath,
+              pageName: LocaleKeys.profile.locale,
               onTap: () {
                 vm.currentIndex = 3;
               },

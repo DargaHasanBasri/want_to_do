@@ -10,7 +10,7 @@ class OnboardingThirdPage extends StatelessWidget {
       children: [
         AspectRatio(
           aspectRatio: 16 / 9,
-          child: Image.asset('assets/images/img_onboarding_third.png'),
+          child: Image.asset(AppAssets.imgOnboardingThirdPath),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 50, bottom: 20),

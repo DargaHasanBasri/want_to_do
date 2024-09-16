@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class AddTaskBottomSheet extends StatelessWidget {
   final TextEditingController taskTitleController;
@@ -24,9 +25,9 @@ class AddTaskBottomSheet extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 24, bottom: 14),
+              padding: const EdgeInsets.only(top: 24, bottom: 14,),
               child: Text(
-                'Add Task',
+                LocaleKeys.home_addTask.locale,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -36,13 +37,13 @@ class AddTaskBottomSheet extends StatelessWidget {
             ),
             CustomTextFormField(
               controller: taskTitleController,
-              hintText: 'Enter task title',
+              hintText: LocaleKeys.home_enterTaskTitle.locale,
               isAutoTrue: true,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 24, bottom: 14),
               child: Text(
-                'Description',
+                LocaleKeys.home_description.locale,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -53,7 +54,7 @@ class AddTaskBottomSheet extends StatelessWidget {
             CustomTextFormField(
               controller: taskTitleController,
               textInputAction: TextInputAction.done,
-              hintText: 'Enter task description',
+              hintText: LocaleKeys.home_enterTaskDescription.locale,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 24),
@@ -73,7 +74,7 @@ class AddTaskBottomSheet extends StatelessWidget {
                           radius: 20,
                           backgroundColor: Colors.transparent,
                           child: Image.asset(
-                            'assets/images/ic_timer.png',
+                            AppAssets.icTimerPath,
                             width: 24,
                             height: 24,
                           ),
@@ -96,7 +97,7 @@ class AddTaskBottomSheet extends StatelessWidget {
                           radius: 20,
                           backgroundColor: Colors.transparent,
                           child: Image.asset(
-                            'assets/images/ic_tag.png',
+                            AppAssets.icTagPath,
                             width: 24,
                             height: 24,
                           ),
@@ -119,7 +120,7 @@ class AddTaskBottomSheet extends StatelessWidget {
                           radius: 20,
                           backgroundColor: Colors.transparent,
                           child: Image.asset(
-                            'assets/images/ic_flag.png',
+                            AppAssets.icFlagPath,
                             width: 24,
                             height: 24,
                           ),
@@ -142,7 +143,7 @@ class AddTaskBottomSheet extends StatelessWidget {
                           radius: 20,
                           backgroundColor: Colors.transparent,
                           child: Image.asset(
-                            'assets/images/ic_send.png',
+                            AppAssets.icSendPath,
                             width: 24,
                             height: 24,
                           ),

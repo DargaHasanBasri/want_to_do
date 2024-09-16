@@ -96,7 +96,7 @@ class _FingerPrintScannerPageState
                 ),
                 SizedBox(height: 50),
                 Center(
-                  child: Image.asset('assets/images/img_app_logo.png'),
+                  child: Image.asset(AppAssets.imgAppLogoPath),
                 ),
                 SizedBox(height: 20),
                 Text(

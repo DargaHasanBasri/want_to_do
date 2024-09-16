@@ -75,7 +75,7 @@ class CustomButton extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(right: 14),
         child: Image.asset(
-          'assets/images/${iconLogoAddress}.png',
+          iconLogoAddress,
           width: 24,
           height: 24,
         ),

@@ -5,9 +5,12 @@ final class Routes {
   static const String Splash = 'splashProvider';
   static const String Onboarding = 'onboardingProvider';
   static const String Welcome = 'welcomeProvider';
+  static const String FingerPrintScanner = 'fingerPrintScannerProvider';
   static const String Register = 'registerProvider';
   static const String Login = 'loginProvider';
   static const String MainTab = 'mainTabProvider';
+  static const String Home = 'homeProvider';
+  static const String Settings = 'settingsProvider';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -23,6 +26,10 @@ final class Routes {
         return MaterialPageRoute(
           builder: (context) => const WelcomeProvider(),
         );
+      case Routes.FingerPrintScanner:
+        return MaterialPageRoute(
+          builder: (context) => const FingerPrintScannerProvider(),
+        );
       case Routes.Register:
         return MaterialPageRoute(
           builder: (context) => const RegisterProvider(),
@@ -34,6 +41,14 @@ final class Routes {
       case Routes.MainTab:
         return MaterialPageRoute(
           builder: (context) => MainTabProvider(),
+        );
+      case Routes.Home:
+        return MaterialPageRoute(
+          builder: (context) => HomeProvider(),
+        );
+      case Routes.Settings:
+        return MaterialPageRoute(
+          builder: (context) => SettingsProvider(),
         );
       default:
         return MaterialPageRoute(

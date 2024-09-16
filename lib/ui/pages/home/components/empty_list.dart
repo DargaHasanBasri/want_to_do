@@ -10,7 +10,9 @@ class EmptyList extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
-          child: Image.asset('assets/images/img_checklist.png'),
+          child: Image.asset(
+            AppAssets.imgCheckListPath,
+          ),
         ),
         Text(
           LocaleKeys.home_emptyListTitle.locale,

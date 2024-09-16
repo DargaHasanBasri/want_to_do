@@ -19,7 +19,7 @@ class _WelcomePageState extends State<WelcomePage> {
           padding: EdgeInsets.zero,
           onPressed: () {},
           icon: Image.asset(
-            'assets/images/ic_arrow_back_left.png',
+            AppAssets.icArrowBackLeftPath,
             color: AppColors.white,
           ),
         ),
@@ -67,7 +67,7 @@ class _WelcomePageState extends State<WelcomePage> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 44, vertical: 26),
           child: Text(
-            'Please login to your account or create new account to continue',
+            LocaleKeys.onboarding_welcomeMessage.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.67),
               fontSize: 16,
@@ -86,12 +86,12 @@ class _WelcomePageState extends State<WelcomePage> {
     return Column(
       children: [
         CustomButton(
-          title: 'LOGIN',
+          title: LocaleKeys.login.locale.toUpperCase(),
           onClick: () {},
         ),
         SizedBox(height: 28),
         CustomButton(
-          title: 'CREATE ACCOUNT',
+          title: LocaleKeys.createAccount.locale,
           onClick: () {},
           backgroundColor: AppColors.backgroundColor,
           borderColor: AppColors.crocusPurple,

@@ -28,7 +28,7 @@ class BottomSheetContent extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 32),
                 child: Image.asset(
-                  'assets/ic_fingerprint.png',
+                  AppAssets.icFingerprintPath,
                   color: iconColor,
                 ),
               ),

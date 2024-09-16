@@ -2,12 +2,12 @@ import 'package:want_to_do/export.dart';
 
 class SettingsItem extends StatelessWidget {
   final String itemTitle;
-  final String iconName;
+  final String iconAddress;
   final VoidCallback onTap;
   const SettingsItem({
     super.key,
     required this.itemTitle,
-    required this.iconName,
+    required this.iconAddress,
     required this.onTap,
   });
 
@@ -21,7 +21,7 @@ class SettingsItem extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(
-              'assets/images/${iconName}.png',
+              iconAddress,
               width: 24,
               height: 24,
             ),
@@ -35,7 +35,7 @@ class SettingsItem extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Image.asset('assets/images/ic_arrow_back_right.png'),
+            Image.asset(AppAssets.icArrowBackRightPath),
           ],
         ),
       ),

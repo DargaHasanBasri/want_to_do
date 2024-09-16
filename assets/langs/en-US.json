@@ -9,6 +9,7 @@
   "searchHintText": "Search for your task...",
   "login": "Login",
   "register": "Register",
+  "or": "or",
   "username": "Username",
   "password": "Password",
   "confirmPassword": "Confirm Password",
@@ -44,11 +45,17 @@
   "home": {
     "home": "Home",
     "emptyListTitle": "What do you want to do today?",
-    "emptyListMsg": "Tap + to add your tasks"
+    "emptyListMsg": "Tap + to add your tasks",
+    "addTask": "Add Task",
+    "enterTaskTitle": "Enter task title",
+    "description": "Description",
+    "enterTaskDescription": "Enter task description"
   },
   "appSettings": {
     "changeColor": "Change app color",
     "changeLanguage": "Change app language",
+    "changeLanguageTitle": "Change Language",
+    "changeLanguageSubTitle": "Please Select a Language",
     "import": "Import",
     "importGoogleCalendar": "Import from Google calendar"
   },

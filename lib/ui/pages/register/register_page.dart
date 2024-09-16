@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -25,7 +26,7 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
             appRoutes.popIfBackStackNotEmpty();
           },
           icon: Image.asset(
-            'assets/images/ic_arrow_back_left.png',
+            AppAssets.icArrowBackLeftPath,
             color: AppColors.white,
           ),
         ),
@@ -47,7 +48,7 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 child: Text(
-                  'Register',
+                  LocaleKeys.register.locale,
                   style: TextStyle(
                     color: AppColors.white.withOpacity(0.87),
                     fontSize: 32,
@@ -62,8 +63,8 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                 controller: _controllerUserName,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldTitle: 'Username',
-                hintText: 'Enter your Username',
+                textFieldTitle: LocaleKeys.username.locale,
+                hintText: LocaleKeys.loginRegister_hintTextUsername.locale,
                 onChanged: (String text) {
                   vm.usernameText = _controllerUserName.text;
                 },
@@ -73,8 +74,8 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                 controller: _controllerPassword,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldTitle: 'Password',
-                hintText: 'Enter your Password',
+                textFieldTitle: LocaleKeys.password.locale,
+                hintText: LocaleKeys.loginRegister_hintTextPassword.locale,
                 isHaveObscure: true,
                 onChanged: (String text) {
                   vm.passwordText = _controllerPassword.text;
@@ -85,8 +86,9 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                 controller: _controllerConfirmPassword,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldTitle: 'Confirm Password',
-                hintText: 'Re-Enter your Password',
+                textFieldTitle: LocaleKeys.confirmPassword.locale,
+                hintText:
+                    LocaleKeys.loginRegister_hintTextConfirmPassword.locale,
                 isHaveObscure: true,
                 onChanged: (String text) {
                   vm.passwordConfirmText = _controllerConfirmPassword.text;
@@ -94,12 +96,12 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
               ),
               SizedBox(height: 40),
               CustomButton(
-                title: 'LOGIN',
+                title: LocaleKeys.login.locale.toUpperCase(),
                 onClick: () {
                   vm.buttonIsActive()
                       ? SizedBox()
                       : showToastMessage(
-                          'Lütfen Boş Alan Bırakmayın ve Şifreleri Aynı Girin!!!!!!!!!!!!!!',
+                          LocaleKeys.errorMessages_emptyOrNotSame.locale,
                         );
                 },
                 backgroundColor: vm.buttonIsActive()
@@ -113,16 +115,16 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
               CustomOrText(),
               SizedBox(height: 24),
               CustomButton(
-                title: 'Login with Google',
-                iconLogoAddress: 'ic_logo_google',
+                title: LocaleKeys.loginRegister_withGoogle.locale,
+                iconLogoAddress: AppAssets.icLogoGooglePath,
                 onClick: () {},
                 backgroundColor: AppColors.backgroundColor,
                 borderColor: AppColors.crocusPurple,
               ),
               SizedBox(height: 20),
               CustomButton(
-                title: 'Login with Apple',
-                iconLogoAddress: 'ic_logo_apple',
+                title: LocaleKeys.loginRegister_withApple.locale,
+                iconLogoAddress: AppAssets.icLogoApplePath,
                 onClick: () {},
                 backgroundColor: AppColors.backgroundColor,
                 borderColor: AppColors.crocusPurple,
@@ -132,7 +134,7 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Already have an account? ',
+                    text: LocaleKeys.loginRegister_isAccountPositive.locale,
                     style: TextStyle(
                       color: AppColors.mountainMist,
                       fontSize: 12,
@@ -140,15 +142,16 @@ class _RegisterPageState extends BaseStatefulState<RegisterPage> {
                     ),
                     children: [
                       TextSpan(
-                        text: 'Login',
+                        text: LocaleKeys.login.locale,
                         style: TextStyle(
                           color: AppColors.white.withOpacity(0.87),
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                         ),
-                        recognizer: TapGestureRecognizer()..onTap = () {
-                          appRoutes.navigateToReplacement(Routes.Login);
-                        },
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            appRoutes.navigateToReplacement(Routes.Login);
+                          },
                       ),
                     ],
                   ),

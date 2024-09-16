@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -13,6 +14,7 @@ class _SplashPageState extends BaseStatefulState<SplashPage> {
     waitAndNavigate(context);
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,10 +23,10 @@ class _SplashPageState extends BaseStatefulState<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/img_app_logo.png'),
+            Image.asset(AppAssets.imgAppLogoPath),
             SizedBox(height: 20),
             Text(
-              'WantToDo',
+              LocaleKeys.appTitle.locale,
               style: TextStyle(
                 color: AppColors.white,
                 fontSize: 40,
@@ -39,9 +41,9 @@ class _SplashPageState extends BaseStatefulState<SplashPage> {
 
   Future<void> waitAndNavigate(BuildContext context) async {
     await Future.delayed(
-      const Duration(seconds: 2),
+      const Duration(seconds: 4),
       () {
-        appRoutes.navigateToReplacement(Routes.Onboarding);
+        appRoutes.navigateToReplacement(Routes.Welcome);
       },
     );
   }

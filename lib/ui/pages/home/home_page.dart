@@ -31,7 +31,7 @@ class _HomePageState extends BaseStatefulState<HomePage> {
                 controller: searchController,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 isPrefixIcon: true,
-                prefixIconAddress: 'assets/images/ic_search.png',
+                prefixIconAddress: AppAssets.icSearchPath,
                 hintText: LocaleKeys.searchHintText.locale,
                 hintTextColor: AppColors.silverChalice,
               ),
@@ -76,7 +76,7 @@ class _HomePageState extends BaseStatefulState<HomePage> {
           ),
           SizedBox(width: 10),
           Image.asset(
-            'assets/images/ic_arrow_down.png',
+            AppAssets.icArrowDownPath,
             width: 16,
             height: 16,
           ),
@@ -102,7 +102,7 @@ class _HomePageState extends BaseStatefulState<HomePage> {
         padding: EdgeInsets.zero,
         onPressed: () {},
         icon: Image.asset(
-          'assets/images/ic_sidebar_menu.png',
+          AppAssets.icSidebarMenuPath,
           color: AppColors.white,
         ),
       ),

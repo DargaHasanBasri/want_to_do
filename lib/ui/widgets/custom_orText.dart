@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class CustomOrText extends StatelessWidget {
   const CustomOrText({super.key});
@@ -15,7 +16,7 @@ class CustomOrText extends StatelessWidget {
         ),
         SizedBox(width: 2),
         Text(
-          'or',
+          LocaleKeys.or.locale,
           style: TextStyle(
             color: AppColors.mountainMist,
             fontSize: 16,

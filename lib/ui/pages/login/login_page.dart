@@ -1,4 +1,5 @@
 import 'package:want_to_do/export.dart';
+import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -36,7 +37,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 child: Text(
-                  'Login',
+                  LocaleKeys.login.locale,
                   style: TextStyle(
                     color: AppColors.white.withOpacity(0.87),
                     fontSize: 32,
@@ -51,8 +52,8 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                 controller: _controllerUserName,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldTitle: 'Username',
-                hintText: 'Enter your Username',
+                textFieldTitle: LocaleKeys.username.locale,
+                hintText: LocaleKeys.loginRegister_hintTextUsername.locale,
                 onChanged: (String text) {
                   vm.usernameText = _controllerUserName.text;
                 },
@@ -62,8 +63,8 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                 controller: _controllerPassword,
                 textFieldBgColor: AppColors.darkJungleGreen,
                 hintTextColor: AppColors.davyGrey,
-                textFieldTitle: 'Password',
-                hintText: 'Enter your Password',
+                textFieldTitle: LocaleKeys.password.locale,
+                hintText: LocaleKeys.loginRegister_hintTextPassword.locale,
                 isHaveObscure: true,
                 onChanged: (String text) {
                   vm.passwordText = _controllerPassword.text;
@@ -71,12 +72,12 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
               ),
               SizedBox(height: 70),
               CustomButton(
-                title: 'LOGIN',
+                title: LocaleKeys.login.locale.toUpperCase(),
                 onClick: () {
                   vm.buttonIsActive()
                       ? appRoutes.navigateToReplacement(Routes.MainTab)
                       : showToastMessage(
-                          'Eksik veya hatalı giriş yaptınız!',
+                          LocaleKeys.errorMessages_missingOrIncorrect.locale,
                         );
                 },
                 backgroundColor: vm.buttonIsActive()
@@ -90,16 +91,16 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
               CustomOrText(),
               SizedBox(height: 30),
               CustomButton(
-                title: 'Login with Google',
-                iconLogoAddress: 'ic_logo_google',
+                title: LocaleKeys.loginRegister_withGoogle.locale,
+                iconLogoAddress: AppAssets.icLogoGooglePath,
                 onClick: () {},
                 backgroundColor: AppColors.backgroundColor,
                 borderColor: AppColors.crocusPurple,
               ),
               SizedBox(height: 20),
               CustomButton(
-                title: 'Login with Apple',
-                iconLogoAddress: 'ic_logo_apple',
+                title: LocaleKeys.loginRegister_withApple.locale,
+                iconLogoAddress: AppAssets.icLogoApplePath,
                 onClick: () {},
                 backgroundColor: AppColors.backgroundColor,
                 borderColor: AppColors.crocusPurple,
@@ -109,7 +110,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Don’t have an account? ',
+                    text: LocaleKeys.loginRegister_isAccountNegative.locale,
                     style: TextStyle(
                       color: AppColors.mountainMist,
                       fontSize: 12,
@@ -117,7 +118,7 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
                     ),
                     children: [
                       TextSpan(
-                        text: 'Register',
+                        text: LocaleKeys.register.locale,
                         style: TextStyle(
                           color: AppColors.white.withOpacity(0.87),
                           fontSize: 12,

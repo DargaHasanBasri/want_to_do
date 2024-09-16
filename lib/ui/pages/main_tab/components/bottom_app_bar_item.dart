@@ -1,13 +1,13 @@
 import 'package:want_to_do/export.dart';
 
 class BottomAppBarItem extends StatelessWidget {
-  final String iconName;
+  final String iconAddress;
   final String pageName;
   final VoidCallback onTap;
 
   const BottomAppBarItem({
     super.key,
-    required this.iconName,
+    required this.iconAddress,
     required this.pageName,
     required this.onTap,
   });
@@ -36,7 +36,7 @@ class BottomAppBarItem extends StatelessWidget {
                     radius: 30,
                     backgroundColor: Colors.transparent,
                     child: Image.asset(
-                      'assets/images/${iconName}.png',
+                      iconAddress,
                       width: 24,
                       height: 24,
                       color: AppColors.white.withOpacity(0.87),

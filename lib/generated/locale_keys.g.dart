@@ -11,6 +11,7 @@ abstract class  LocaleKeys {
   static const searchHintText = 'searchHintText';
   static const login = 'login';
   static const register = 'register';
+  static const or = 'or';
   static const username = 'username';
   static const password = 'password';
   static const confirmPassword = 'confirmPassword';
@@ -44,9 +45,15 @@ abstract class  LocaleKeys {
   static const home_home = 'home.home';
   static const home_emptyListTitle = 'home.emptyListTitle';
   static const home_emptyListMsg = 'home.emptyListMsg';
+  static const home_addTask = 'home.addTask';
+  static const home_enterTaskTitle = 'home.enterTaskTitle';
+  static const home_description = 'home.description';
+  static const home_enterTaskDescription = 'home.enterTaskDescription';
   static const home = 'home';
   static const appSettings_changeColor = 'appSettings.changeColor';
   static const appSettings_changeLanguage = 'appSettings.changeLanguage';
+  static const appSettings_changeLanguageTitle = 'appSettings.changeLanguageTitle';
+  static const appSettings_changeLanguageSubTitle = 'appSettings.changeLanguageSubTitle';
   static const appSettings_import = 'appSettings.import';
   static const appSettings_importGoogleCalendar = 'appSettings.importGoogleCalendar';
   static const appSettings = 'appSettings';

@@ -1,8 +1,5 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
-import 'package:want_to_do/ui/pages/settings/components/settings_item.dart';
-import 'package:want_to_do/ui/widgets/custom_popup.dart';
-import 'package:want_to_do/ui/widgets/custom_radio_button.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -43,7 +40,7 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
         padding: EdgeInsets.zero,
         onPressed: () {},
         icon: Image.asset(
-          'assets/images/ic_arrow_back_left.png',
+          AppAssets.icArrowBackLeftPath,
           color: AppColors.white,
         ),
       ),
@@ -66,20 +63,20 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
         SizedBox(height: 8),
         SettingsItem(
           itemTitle: LocaleKeys.appSettings_changeColor.locale,
-          iconName: 'ic_brush',
+          iconAddress: AppAssets.icBrushPath,
           onTap: () {},
         ),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 8),
           child: SettingsItem(
             itemTitle: LocaleKeys.appSettings_import.locale,
-            iconName: 'ic_text',
+            iconAddress: AppAssets.icTextPath,
             onTap: () {},
           ),
         ),
         SettingsItem(
           itemTitle: LocaleKeys.appSettings_changeLanguage.locale,
-          iconName: 'ic_language_square',
+          iconAddress: AppAssets.icLanguageSquarePath,
           onTap: () {
             showPopupDialog(
               context: context,
@@ -104,7 +101,7 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
           padding: EdgeInsets.symmetric(vertical: 8),
           child: SettingsItem(
             itemTitle: LocaleKeys.appSettings_importGoogleCalendar.locale,
-            iconName: 'ic_import',
+            iconAddress: AppAssets.icImportPath,
             onTap: () {},
           ),
         ),
@@ -119,7 +116,7 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 16),
           child: Text(
-            'Change Language',
+            LocaleKeys.appSettings_changeLanguageTitle.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 20,
@@ -137,7 +134,7 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 24),
           child: Text(
-            'Please Select a Language',
+            LocaleKeys.appSettings_changeLanguageSubTitle.locale,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 20,

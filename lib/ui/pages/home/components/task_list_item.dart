@@ -89,7 +89,7 @@ class TaskListItem extends StatelessWidget {
                                   child: Row(
                                     children: [
                                       Image.asset(
-                                        'assets/images/ic_flag.png',
+                                        AppAssets.icCategoryHomePath,
                                         width: 14,
                                         height: 14,
                                       ),
@@ -130,7 +130,7 @@ class TaskListItem extends StatelessWidget {
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Image.asset(
-                                        'assets/images/ic_flag.png',
+                                        AppAssets.icFlagPath,
                                         width: 14,
                                         height: 14,
                                       ),

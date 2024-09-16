@@ -9,6 +9,7 @@
   "searchHintText": "Görevler içinde ara...",
   "login": "Giriş Yap",
   "register": "Kayıt Ol",
+  "or": "ya da",
   "username": "Kullanıcı Adı",
   "password": "Şifre",
   "confirmPassword": "Şifreyi Onayla",
@@ -44,11 +45,17 @@
   "home": {
     "home": "Home",
     "emptyListTitle": "Bugün ne yapmak istersiniz?",
-    "emptyListMsg": "Görevlerinizi eklemek için + simgesine tıklayın"
+    "emptyListMsg": "Görevlerinizi eklemek için + simgesine tıklayın",
+    "addTask": "Görev Ekle",
+    "enterTaskTitle": "Görev başlığı gir",
+    "description": "Açıklama",
+    "enterTaskDescription": "Görev açıklaması gir"
   },
   "appSettings": {
     "changeColor": "Uygulama rengini değiştir",
     "changeLanguage": "Uygulama dilini değiştir",
+    "changeLanguageTitle": "Change Language",
+    "changeLanguageSubTitle": "Lütfen Bir Dil Seçin",
     "import": "İçe Aktar",
     "importGoogleCalendar": "Google Takvim'den İçe Aktar"
   },

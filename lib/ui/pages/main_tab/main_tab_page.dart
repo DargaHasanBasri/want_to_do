@@ -9,9 +9,9 @@ class MainTabPage extends StatefulWidget {
 }
 
 class _MainTabPageState extends BaseStatefulState<MainTabPage> {
-  final TextEditingController taskController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final _vm = context.watch<MainTabViewModel>();
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       extendBody: true,
@@ -20,7 +20,36 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
           showCustomBottomSheet(
             context: context,
             child: AddTaskBottomSheet(
-              taskTitleController: taskController,
+              taskTitleController: _vm.taskTitleController,
+              taskDescriptionController: _vm.taskDescriptionController,
+              onclickChooseTime: () {
+                _vm.checkTaskParameters()
+                    ? appRoutes.navigateToReplacement(Routes.MainTab)
+                    : showToastMessage(
+                        LocaleKeys.errorMessages_emptyOrNotSame.locale,
+                      );
+              },
+              onclickAddCategory: () {
+                _vm.checkTaskParameters()
+                    ? appRoutes.navigateToReplacement(Routes.MainTab)
+                    : showToastMessage(
+                        LocaleKeys.errorMessages_emptyOrNotSame.locale,
+                      );
+              },
+              onclickTaskPriority: () {
+                _vm.checkTaskParameters()
+                    ? appRoutes.navigateToReplacement(Routes.MainTab)
+                    : showToastMessage(
+                        LocaleKeys.errorMessages_emptyOrNotSame.locale,
+                      );
+              },
+              onclickSend: () {
+                _vm.checkTaskParameters()
+                    ? appRoutes.navigateToReplacement(Routes.MainTab)
+                    : showToastMessage(
+                        LocaleKeys.errorMessages_emptyOrNotSame.locale,
+                      );
+              },
             ),
           );
         },

@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:want_to_do/base/base_view_model.dart';
+import 'package:want_to_do/export.dart';
+import 'package:want_to_do/models/category_model/category_model.dart';
 
 class MainTabViewModel extends BaseViewModel {
   TextEditingController taskTitleController = TextEditingController();
@@ -38,4 +39,29 @@ class MainTabViewModel extends BaseViewModel {
       return true;
     return false;
   }
+
+  /// TODO: Static for now since there is no backend
+  /// TODO: will then connect with the backend
+  List<CategoryModel> categories = [
+    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
+    CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
+    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
+    CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
+    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
+    CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
+    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
+    CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
+    CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
+    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
+    CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
+    CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
+    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
+
+  ];
 }

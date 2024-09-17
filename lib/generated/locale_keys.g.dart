@@ -67,6 +67,18 @@ abstract class  LocaleKeys {
   static const category_chooseIconFromLibrary = 'category.chooseIconFromLibrary';
   static const category_categoryColor = 'category.categoryColor';
   static const category_createCategory = 'category.createCategory';
+  static const category_chooseCategory = 'category.chooseCategory';
+  static const category_addCategory = 'category.addCategory';
+  static const category_groceryCategory = 'category.groceryCategory';
+  static const category_workCategory = 'category.workCategory';
+  static const category_sportCategory = 'category.sportCategory';
+  static const category_designCategory = 'category.designCategory';
+  static const category_universityCategory = 'category.universityCategory';
+  static const category_socialCategory = 'category.socialCategory';
+  static const category_musicCategory = 'category.musicCategory';
+  static const category_healthCategory = 'category.healthCategory';
+  static const category_movieCategory = 'category.movieCategory';
+  static const category_homeCategory = 'category.homeCategory';
   static const category = 'category';
 
 }

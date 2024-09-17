@@ -70,6 +70,18 @@
     "categoryIcon": "Category icon:",
     "chooseIconFromLibrary": "Choose icon from library",
     "categoryColor": "Category color:",
-    "createCategory": "Create Category"
+    "createCategory": "Create Category",
+    "chooseCategory": "Choose Category",
+    "addCategory": "Add Category",
+    "groceryCategory": "Grocery",
+    "workCategory": "Work",
+    "sportCategory": "Sport",
+    "designCategory": "Design",
+    "universityCategory": "University",
+    "socialCategory": "Social",
+    "musicCategory": "Music",
+    "healthCategory": "Health",
+    "movieCategory": "Movie",
+    "homeCategory": "Home"
   }
 }

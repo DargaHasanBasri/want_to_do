@@ -31,7 +31,16 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
               },
               onclickAddCategory: () {
                 _vm.checkTaskParameters()
-                    ? appRoutes.navigateToReplacement(Routes.MainTab)
+                    ? showPopupDialog(
+                        context: context,
+                        child: CustomPopup(
+                          child: (BuildContext context) {
+                            return PopupCategoryChild(
+                              categories: _vm.categories,
+                            );
+                          },
+                        ),
+                      )
                     : showToastMessage(
                         LocaleKeys.errorMessages_emptyOrNotSame.locale,
                       );

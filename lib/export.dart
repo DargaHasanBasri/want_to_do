@@ -62,3 +62,4 @@ export 'package:want_to_do/ui/widgets/custom_radio_button.dart';
 export 'package:want_to_do/ui/pages/category/category_page.dart';
 export 'package:want_to_do/ui/pages/category/category_view_model.dart';
 export 'package:want_to_do/ui/pages/category/category_provider.dart';
+export 'package:want_to_do/ui/pages/main_tab/components/popup_category_child.dart';

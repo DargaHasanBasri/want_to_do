@@ -70,6 +70,18 @@
     "categoryIcon": "Kategori ikon:",
     "chooseIconFromLibrary": "Kütüphaneden ikon seç",
     "categoryColor": "Kategori Renk:",
-    "createCategory": "Kategori Oluştur"
+    "createCategory": "Kategori Oluştur",
+    "chooseCategory": "Kategori Seç",
+    "addCategory": "Kategori Ekle",
+    "groceryCategory": "Bakkal",
+    "workCategory": "İş",
+    "sportCategory": "Spor",
+    "designCategory": "Tasarım",
+    "universityCategory": "University",
+    "socialCategory": "Üniversite",
+    "musicCategory": "Müzik",
+    "healthCategory": "Sağlık",
+    "movieCategory": "Film",
+    "homeCategory": "Ev"
   }
 }

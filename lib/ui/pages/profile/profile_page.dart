@@ -1,6 +1,5 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
-import 'package:want_to_do/ui/pages/profile/components/popup_change_name_child.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -84,13 +83,11 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                       onTap: () {
                         showPopupDialog(
                           context: context,
-                          child: CustomPopup(
-                            child: (BuildContext context) {
-                              return PopupChangeNameChild(
-                                newAccNameController: _vm.newAccNameController,
-                              );
-                            },
-                          ),
+                          child: (context) {
+                            return PopupChangeName(
+                              newAccNameController: _vm.newAccNameController,
+                            );
+                          },
                         );
                       },
                     ),
@@ -99,7 +96,17 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                       itemTitle:
                           LocaleKeys.profile_changeAccountPassword.locale,
                       iconAddress: AppAssets.icKeyPath,
-                      onTap: () {},
+                      onTap: () {
+                        showPopupDialog(
+                          context: context,
+                          child: (context) {
+                            return PopupChangePassword(
+                              oldPasswordController: _vm.oldPasswordController,
+                              newPasswordController: _vm.newPasswordController,
+                            );
+                          },
+                        );
+                      },
                     ),
                     SizedBox(height: 8),
                     ProfileItem(

@@ -33,13 +33,11 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
                 _vm.checkTaskParameters()
                     ? showPopupDialog(
                         context: context,
-                        child: CustomPopup(
-                          child: (BuildContext context) {
-                            return PopupCategoryChild(
-                              categories: _vm.categories,
-                            );
-                          },
-                        ),
+                        child: (context) {
+                          return PopupCategoryChild(
+                            categories: _vm.categories,
+                          );
+                        },
                       )
                     : showToastMessage(
                         LocaleKeys.errorMessages_emptyOrNotSame.locale,
@@ -71,15 +69,26 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
         color: AppColors.darkGrey,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          child: _buildNavigationBar(),
+          child: _buildNavigationBar(_vm),
         ),
       ),
-      body: _buildBody(),
+      body: _buildBody(_vm),
     );
   }
 
-  Widget _buildBody() {
-    return HomeProvider();
+  Widget _buildBody(MainTabViewModel vm) {
+    switch (vm.currentIndex) {
+      case 0:
+        return HomeProvider();
+      case 1:
+        return HomeProvider();
+      case 2:
+        return HomeProvider();
+      case 3:
+        return ProfileProvider();
+      default:
+        return HomeProvider();
+    }
   }
 
   Widget _buildFloatingActionButton() {
@@ -93,52 +102,48 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
     );
   }
 
-  Widget _buildNavigationBar() {
-    return Consumer<MainTabViewModel>(
-      builder: (context, vm, child) {
-        return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            BottomAppBarItem(
-              iconAddress: vm.currentIndex == 0
-                  ? AppAssets.icActiveHomePath
-                  : AppAssets.icInactiveHomePath,
-              pageName: LocaleKeys.home_home.locale,
-              onTap: () {
-                vm.currentIndex = 0;
-              },
-            ),
-            BottomAppBarItem(
-              iconAddress: vm.currentIndex == 1
-                  ? AppAssets.icActiveCalendarPath
-                  : AppAssets.icInactiveCalendarPath,
-              pageName: LocaleKeys.calendar.locale,
-              onTap: () {
-                vm.currentIndex = 1;
-              },
-            ),
-            SizedBox(),
-            BottomAppBarItem(
-              iconAddress: vm.currentIndex == 2
-                  ? AppAssets.icActiveFocusPath
-                  : AppAssets.icInactiveFocusPath,
-              pageName: LocaleKeys.focus.locale,
-              onTap: () {
-                vm.currentIndex = 2;
-              },
-            ),
-            BottomAppBarItem(
-              iconAddress: vm.currentIndex == 3
-                  ? AppAssets.icActiveProfilePath
-                  : AppAssets.icInactiveProfilePath,
-              pageName: LocaleKeys.profile.locale,
-              onTap: () {
-                vm.currentIndex = 3;
-              },
-            ),
-          ],
-        );
-      },
+  Widget _buildNavigationBar(MainTabViewModel vm) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        BottomAppBarItem(
+          iconAddress: vm.currentIndex == 0
+              ? AppAssets.icActiveHomePath
+              : AppAssets.icInactiveHomePath,
+          pageName: LocaleKeys.home_home.locale,
+          onTap: () {
+            vm.currentIndex = 0;
+          },
+        ),
+        BottomAppBarItem(
+          iconAddress: vm.currentIndex == 1
+              ? AppAssets.icActiveCalendarPath
+              : AppAssets.icInactiveCalendarPath,
+          pageName: LocaleKeys.calendar.locale,
+          onTap: () {
+            vm.currentIndex = 1;
+          },
+        ),
+        SizedBox(),
+        BottomAppBarItem(
+          iconAddress: vm.currentIndex == 2
+              ? AppAssets.icActiveFocusPath
+              : AppAssets.icInactiveFocusPath,
+          pageName: LocaleKeys.focus.locale,
+          onTap: () {
+            vm.currentIndex = 2;
+          },
+        ),
+        BottomAppBarItem(
+          iconAddress: vm.currentIndex == 3
+              ? AppAssets.icActiveProfilePath
+              : AppAssets.icInactiveProfilePath,
+          pageName: LocaleKeys.profileTitle.locale,
+          onTap: () {
+            vm.currentIndex = 3;
+          },
+        ),
+      ],
     );
   }
 }

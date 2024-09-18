@@ -101,6 +101,8 @@
     "enterNewPassword": "Enter new password",
     "tackPicture": "Tack picture",
     "importFromGallery": "Import from gallery",
-    "importFromGoogleDrive": "Import from Google Drive"
+    "importFromGoogleDrive": "Import from Google Drive",
+    "newPassword": "New Password",
+    "oldPassword": "Old Password"
   }
 }

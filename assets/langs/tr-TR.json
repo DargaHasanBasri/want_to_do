@@ -101,6 +101,8 @@
     "enterNewPassword": "Yeni Şifre Gir",
     "tackPicture": "Fotoğraf Çek",
     "importFromGallery": "Galeriden Yükle",
-    "importFromGoogleDrive": "Google Drive'dan Yükle"
+    "importFromGoogleDrive": "Google Drive'dan Yükle",
+    "newPassword": "Yeni Şifre",
+    "oldPassword": "Eski Şifre"
   }
 }

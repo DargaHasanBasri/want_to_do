@@ -4,10 +4,14 @@ import 'package:want_to_do/generated/locale_keys.g.dart';
 class PopupChangePassword extends StatelessWidget {
   final TextEditingController oldPasswordController;
   final TextEditingController newPasswordController;
+  final VoidCallback onClickCancel;
+  final VoidCallback onClickEdit;
   const PopupChangePassword({
     super.key,
     required this.oldPasswordController,
     required this.newPasswordController,
+    required this.onClickCancel,
+    required this.onClickEdit,
   });
 
   @override
@@ -63,14 +67,14 @@ class PopupChangePassword extends StatelessWidget {
                   title: LocaleKeys.cancel.locale,
                   titleColor: AppColors.crocusPurple,
                   backgroundColor: AppColors.darkGrey,
-                  onClick: () {},
+                  onClick: () => onClickCancel.call(),
                 ),
               ),
               SizedBox(width: 10),
               Expanded(
                 child: CustomButton(
                   title: LocaleKeys.edit.locale,
-                  onClick: () {},
+                  onClick: () => onClickEdit.call(),
                 ),
               ),
             ],

@@ -3,9 +3,13 @@ import 'package:want_to_do/generated/locale_keys.g.dart';
 
 class PopupChangeName extends StatelessWidget {
   final TextEditingController newAccNameController;
+  final VoidCallback onClickCancel;
+  final VoidCallback onClickEdit;
   const PopupChangeName({
     super.key,
     required this.newAccNameController,
+    required this.onClickCancel,
+    required this.onClickEdit,
   });
 
   @override
@@ -47,14 +51,14 @@ class PopupChangeName extends StatelessWidget {
                   title: LocaleKeys.cancel.locale,
                   titleColor: AppColors.crocusPurple,
                   backgroundColor: AppColors.darkGrey,
-                  onClick: () {},
+                  onClick: () => onClickCancel.call(),
                 ),
               ),
               SizedBox(width: 10),
               Expanded(
                 child: CustomButton(
                   title: LocaleKeys.edit.locale,
-                  onClick: () {},
+                  onClick: () => onClickEdit.call(),
                 ),
               ),
             ],

@@ -86,6 +86,8 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                           child: (context) {
                             return PopupChangeName(
                               newAccNameController: _vm.newAccNameController,
+                              onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                              onClickEdit: () {},
                             );
                           },
                         );
@@ -103,6 +105,8 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                             return PopupChangePassword(
                               oldPasswordController: _vm.oldPasswordController,
                               newPasswordController: _vm.newPasswordController,
+                              onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                              onClickEdit: () {},
                             );
                           },
                         );
@@ -112,7 +116,14 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                     ProfileItem(
                       itemTitle: LocaleKeys.profile_changeAccountImage.locale,
                       iconAddress: AppAssets.icCameraPath,
-                      onTap: () {},
+                      onTap: () {
+                        showCustomBottomSheet(
+                          context: context,
+                          child: BottomSheetChangeImage(
+                            onClick: () {},
+                          ),
+                        );
+                      },
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 16, bottom: 4),

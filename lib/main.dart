@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       navigatorKey: locator<AppRoutes>().baseNavigatorKey,
       onGenerateRoute: Routes.generateRoute,
-      initialRoute: Routes.Profile,
+      initialRoute: Routes.MainTab,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

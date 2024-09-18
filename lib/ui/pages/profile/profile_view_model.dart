@@ -3,4 +3,6 @@ import 'package:want_to_do/export.dart';
 
 class ProfileViewModel extends BaseViewModel {
   TextEditingController newAccNameController = TextEditingController();
+  TextEditingController newPasswordController = TextEditingController();
+  TextEditingController oldPasswordController = TextEditingController();
 }

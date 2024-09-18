@@ -97,6 +97,8 @@ abstract class  LocaleKeys {
   static const profile_tackPicture = 'profile.tackPicture';
   static const profile_importFromGallery = 'profile.importFromGallery';
   static const profile_importFromGoogleDrive = 'profile.importFromGoogleDrive';
+  static const profile_newPassword = 'profile.newPassword';
+  static const profile_oldPassword = 'profile.oldPassword';
   static const profile = 'profile';
 
 }

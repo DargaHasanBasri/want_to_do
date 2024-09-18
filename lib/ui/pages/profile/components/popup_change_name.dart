@@ -1,9 +1,9 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
 
-class PopupChangeNameChild extends StatelessWidget {
+class PopupChangeName extends StatelessWidget {
   final TextEditingController newAccNameController;
-  const PopupChangeNameChild({
+  const PopupChangeName({
     super.key,
     required this.newAccNameController,
   });

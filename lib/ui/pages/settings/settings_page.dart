@@ -38,7 +38,9 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
       centerTitle: true,
       leading: IconButton(
         padding: EdgeInsets.zero,
-        onPressed: () {},
+        onPressed: () {
+          appRoutes.popIfBackStackNotEmpty();
+        },
         icon: Image.asset(
           AppAssets.icArrowBackLeftPath,
           color: AppColors.white,

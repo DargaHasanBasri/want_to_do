@@ -70,3 +70,4 @@ export 'package:want_to_do/ui/pages/profile/components/profile_item.dart';
 export 'package:want_to_do/ui/widgets/custom_divider.dart';
 export 'package:want_to_do/ui/pages/profile/components/popup_change_name.dart';
 export 'package:want_to_do/ui/pages/profile/components/popup_change_password.dart';
+export 'package:want_to_do/ui/pages/profile/components/bottom_sheet_change_image.dart';

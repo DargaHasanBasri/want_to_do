@@ -8,7 +8,7 @@ class WelcomePage extends StatefulWidget {
   State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _WelcomePageState extends State<WelcomePage> {
+class _WelcomePageState extends BaseStatefulState<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,12 +87,16 @@ class _WelcomePageState extends State<WelcomePage> {
       children: [
         CustomButton(
           title: LocaleKeys.login.locale.toUpperCase(),
-          onClick: () {},
+          onClick: () {
+            appRoutes.navigateTo(Routes.Login);
+          },
         ),
         SizedBox(height: 28),
         CustomButton(
           title: LocaleKeys.createAccount.locale,
-          onClick: () {},
+          onClick: () {
+            appRoutes.navigateTo(Routes.Register);
+          },
           backgroundColor: AppColors.backgroundColor,
           borderColor: AppColors.crocusPurple,
         ),

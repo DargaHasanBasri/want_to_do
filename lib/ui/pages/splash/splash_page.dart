@@ -43,7 +43,7 @@ class _SplashPageState extends BaseStatefulState<SplashPage> {
     await Future.delayed(
       const Duration(seconds: 4),
       () {
-        appRoutes.navigateToReplacement(Routes.Welcome);
+        appRoutes.navigateToReplacement(Routes.Onboarding);
       },
     );
   }

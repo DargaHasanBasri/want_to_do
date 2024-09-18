@@ -18,7 +18,16 @@ class _LoginPageState extends BaseStatefulState<LoginPage> {
       appBar: AppBar(
         backgroundColor: AppColors.backgroundColor,
         forceMaterialTransparency: true,
-        automaticallyImplyLeading: false,
+        leading: IconButton(
+          padding: EdgeInsets.zero,
+          onPressed: () {
+            appRoutes.popIfBackStackNotEmpty();
+          },
+          icon: Image.asset(
+            AppAssets.icArrowBackLeftPath,
+            color: AppColors.white,
+          ),
+        ),
       ),
       backgroundColor: AppColors.backgroundColor,
       body: _buildBody(context),

@@ -101,7 +101,7 @@ class _OnboardingPageState extends BaseStatefulState<OnboardingPage> {
                           curve: Curves.ease,
                         );
                       } else {
-                        appRoutes.navigateRemoveUntil(Routes.Login);
+                        appRoutes.navigateRemoveUntil(Routes.Welcome);
                       }
                     },
                   ),

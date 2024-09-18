@@ -12,6 +12,7 @@ final class Routes {
   static const String Home = 'homeProvider';
   static const String Settings = 'settingsProvider';
   static const String Category = 'categoryProvider';
+  static const String Profile = 'profileProvider';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -54,6 +55,10 @@ final class Routes {
       case Routes.Category:
         return MaterialPageRoute(
           builder: (context) => CategoryProvider(),
+        );
+      case Routes.Profile:
+        return MaterialPageRoute(
+          builder: (context) => ProfileProvider(),
         );
       default:
         return MaterialPageRoute(

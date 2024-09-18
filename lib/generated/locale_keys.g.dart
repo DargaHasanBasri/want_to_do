@@ -4,7 +4,8 @@ abstract class  LocaleKeys {
   static const appTitle = 'appTitle';
   static const calendar = 'calendar';
   static const focus = 'focus';
-  static const profile = 'profile';
+  static const profileTitle = 'profileTitle';
+  static const account = 'account';
   static const settings = 'settings';
   static const completed = 'completed';
   static const today = 'today';
@@ -50,6 +51,7 @@ abstract class  LocaleKeys {
   static const home_description = 'home.description';
   static const home_enterTaskDescription = 'home.enterTaskDescription';
   static const home = 'home';
+  static const appSettings_appSettings = 'appSettings.appSettings';
   static const appSettings_changeColor = 'appSettings.changeColor';
   static const appSettings_changeLanguage = 'appSettings.changeLanguage';
   static const appSettings_changeLanguageTitle = 'appSettings.changeLanguageTitle';
@@ -80,5 +82,20 @@ abstract class  LocaleKeys {
   static const category_movieCategory = 'category.movieCategory';
   static const category_homeCategory = 'category.homeCategory';
   static const category = 'category';
+  static const profile_taskLeft = 'profile.taskLeft';
+  static const profile_taskDone = 'profile.taskDone';
+  static const profile_changeAccountName = 'profile.changeAccountName';
+  static const profile_changeAccountPassword = 'profile.changeAccountPassword';
+  static const profile_changeAccountImage = 'profile.changeAccountImage';
+  static const profile_aboutUS = 'profile.aboutUS';
+  static const profile_helpFeedback = 'profile.helpFeedback';
+  static const profile_supportUS = 'profile.supportUS';
+  static const profile_logOut = 'profile.logOut';
+  static const profile_enterOldPassword = 'profile.enterOldPassword';
+  static const profile_enterNewPassword = 'profile.enterNewPassword';
+  static const profile_tackPicture = 'profile.tackPicture';
+  static const profile_importFromGallery = 'profile.importFromGallery';
+  static const profile_importFromGoogleDrive = 'profile.importFromGoogleDrive';
+  static const profile = 'profile';
 
 }

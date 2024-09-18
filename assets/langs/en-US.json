@@ -2,7 +2,8 @@
   "appTitle": "WantToDo",
   "calendar": "Calendar",
   "focus": "Focus",
-  "profile": "Profile",
+  "profileTitle": "Profile",
+  "account": "Account",
   "settings": "Settings",
   "completed": "Completed",
   "today": "Today",
@@ -52,6 +53,7 @@
     "enterTaskDescription": "Enter task description"
   },
   "appSettings": {
+    "appSettings": "App Settings",
     "changeColor": "Change app color",
     "changeLanguage": "Change app language",
     "changeLanguageTitle": "Change Language",
@@ -83,5 +85,21 @@
     "healthCategory": "Health",
     "movieCategory": "Movie",
     "homeCategory": "Home"
+  },
+  "profile": {
+    "taskLeft": "Task left",
+    "taskDone": "Task done",
+    "changeAccountName": "Change account name",
+    "changeAccountPassword": "Change account password",
+    "changeAccountImage": "Change account Image",
+    "aboutUS": "About US",
+    "helpFeedback": "Help & Feedback",
+    "supportUS": "Support US",
+    "logOut": "Log out",
+    "enterOldPassword": "Enter old password",
+    "enterNewPassword": "Enter new password",
+    "tackPicture": "Tack picture",
+    "importFromGallery": "Import from gallery",
+    "importFromGoogleDrive": "Import from Google Drive"
   }
 }

@@ -63,3 +63,8 @@ export 'package:want_to_do/ui/pages/category/category_page.dart';
 export 'package:want_to_do/ui/pages/category/category_view_model.dart';
 export 'package:want_to_do/ui/pages/category/category_provider.dart';
 export 'package:want_to_do/ui/pages/main_tab/components/popup_category_child.dart';
+export 'package:want_to_do/ui/pages/profile/profile_page.dart';
+export 'package:want_to_do/ui/pages/profile/profile_view_model.dart';
+export 'package:want_to_do/ui/pages/profile/profile_provider.dart';
+export 'package:want_to_do/ui/pages/profile/components/user_profile_info.dart';
+export 'package:want_to_do/ui/pages/profile/components/profile_item.dart';

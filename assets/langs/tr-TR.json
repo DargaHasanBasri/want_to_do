@@ -2,7 +2,8 @@
   "appTitle": "WantToDo",
   "calendar": "Takvim",
   "focus": "Odaklanma",
-  "profile": "Profil",
+  "profileTitle": "Profil",
+  "account": "Account",
   "settings": "Ayarlar",
   "completed": "Tamamlandı",
   "today": "Bugün",
@@ -52,6 +53,7 @@
     "enterTaskDescription": "Görev açıklaması gir"
   },
   "appSettings": {
+    "appSettings": "Uygulama Ayarları",
     "changeColor": "Uygulama rengini değiştir",
     "changeLanguage": "Uygulama dilini değiştir",
     "changeLanguageTitle": "Change Language",
@@ -83,5 +85,21 @@
     "healthCategory": "Sağlık",
     "movieCategory": "Film",
     "homeCategory": "Ev"
+  },
+  "profile": {
+    "taskLeft": "Görev kaldı",
+    "taskDone": "Görev tamamlandı",
+    "changeAccountName": "Kullanıcı adını değiştir",
+    "changeAccountPassword": "Şifreni değiştir",
+    "changeAccountImage": "Profil fotoğrafını değiştir",
+    "aboutUS": "Hakkımızda",
+    "helpFeedback": "Yardım & Geri Bildirim",
+    "supportUS": "Bizi Destekleyin",
+    "logOut": "Oturumu kapat",
+    "enterOldPassword": "Şuanki Şifreni Gir",
+    "enterNewPassword": "Yeni Şifre Gir",
+    "tackPicture": "Fotoğraf Çek",
+    "importFromGallery": "Galeriden Yükle",
+    "importFromGoogleDrive": "Google Drive'dan Yükle"
   }
 }

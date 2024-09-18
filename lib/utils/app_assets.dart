@@ -35,6 +35,15 @@ final class AppAssets {
   static String icTagPath = _imagePath('ic_tag');
   static String icTextPath = _imagePath('ic_text');
   static String icTimerPath = _imagePath('ic_timer');
+  static String icCameraPath = _imagePath('ic_camera');
+  static String icFlashPath = _imagePath('ic_flash');
+  static String icInfoCirclePath = _imagePath('ic_info_circle');
+  static String icKeyPath = _imagePath('ic_key');
+  static String icLikePath = _imagePath('ic_like');
+  static String icLogoutPath = _imagePath('ic_logout');
+  static String icMenuPath = _imagePath('ic_menu');
+  static String icSettingsPath = _imagePath('ic_settings');
+  static String icUserPath = _imagePath('ic_user');
 
   static String _imagePath(String fileName) => '$_basePath$fileName.png';
 }

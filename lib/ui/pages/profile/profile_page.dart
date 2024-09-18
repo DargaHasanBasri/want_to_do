@@ -1,5 +1,6 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
+import 'package:want_to_do/ui/pages/profile/components/popup_change_name_child.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -13,11 +14,12 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      body: _buildBody(),
+      body: _buildBody(context),
     );
   }
 
-  Widget _buildBody() {
+  Widget _buildBody(BuildContext context) {
+    final _vm = context.watch<ProfileViewModel>();
     return SafeArea(
       child: Padding(
         padding: AppPaddings.pagePaddingHorizontal,
@@ -79,7 +81,18 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                     ProfileItem(
                       itemTitle: LocaleKeys.profile_changeAccountName.locale,
                       iconAddress: AppAssets.icUserPath,
-                      onTap: () {},
+                      onTap: () {
+                        showPopupDialog(
+                          context: context,
+                          child: CustomPopup(
+                            child: (BuildContext context) {
+                              return PopupChangeNameChild(
+                                newAccNameController: _vm.newAccNameController,
+                              );
+                            },
+                          ),
+                        );
+                      },
                     ),
                     SizedBox(height: 8),
                     ProfileItem(

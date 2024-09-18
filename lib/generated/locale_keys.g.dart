@@ -20,6 +20,7 @@ abstract class  LocaleKeys {
   static const back = 'back';
   static const next = 'next';
   static const cancel = 'cancel';
+  static const edit = 'edit';
   static const getStarted = 'getStarted';
   static const createAccount = 'createAccount';
   static const todayAt = 'todayAt';

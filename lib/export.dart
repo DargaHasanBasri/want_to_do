@@ -68,3 +68,4 @@ export 'package:want_to_do/ui/pages/profile/profile_view_model.dart';
 export 'package:want_to_do/ui/pages/profile/profile_provider.dart';
 export 'package:want_to_do/ui/pages/profile/components/user_profile_info.dart';
 export 'package:want_to_do/ui/pages/profile/components/profile_item.dart';
+export 'package:want_to_do/ui/widgets/custom_divider.dart';

@@ -1,5 +1,6 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
+import 'package:want_to_do/ui/pages/main_tab/components/popup_choose_time.dart';
 
 class MainTabPage extends StatefulWidget {
   const MainTabPage({super.key});
@@ -24,7 +25,15 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
               taskDescriptionController: _vm.taskDescriptionController,
               onclickChooseTime: () {
                 _vm.checkTaskParameters()
-                    ? appRoutes.navigateToReplacement(Routes.MainTab)
+                    ? showPopupDialog(
+                        context: context,
+                        child: (context) {
+                          return PopupChooseTime(
+                            onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                            onClickChooseTime: appRoutes.popIfBackStackNotEmpty,
+                          );
+                        },
+                      )
                     : showToastMessage(
                         LocaleKeys.errorMessages_emptyOrNotSame.locale,
                       );
@@ -34,7 +43,7 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
                     ? showPopupDialog(
                         context: context,
                         child: (context) {
-                          return PopupCategoryChild(
+                          return PopupCategoryChoose(
                             categories: _vm.categories,
                           );
                         },
@@ -81,7 +90,7 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
       case 0:
         return HomeProvider();
       case 1:
-        return HomeProvider();
+        return CalendarProvider();
       case 2:
         return HomeProvider();
       case 3:

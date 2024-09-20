@@ -51,6 +51,7 @@ abstract class  LocaleKeys {
   static const home_enterTaskTitle = 'home.enterTaskTitle';
   static const home_description = 'home.description';
   static const home_enterTaskDescription = 'home.enterTaskDescription';
+  static const home_chooseTime = 'home.chooseTime';
   static const home = 'home';
   static const appSettings_appSettings = 'appSettings.appSettings';
   static const appSettings_changeColor = 'appSettings.changeColor';

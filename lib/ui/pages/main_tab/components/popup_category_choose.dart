@@ -2,10 +2,10 @@ import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
 import 'package:want_to_do/models/category_model/category_model.dart';
 
-class PopupCategoryChild extends StatelessWidget {
+class PopupCategoryChoose extends StatelessWidget {
   final List<CategoryModel> categories;
 
-  const PopupCategoryChild({
+  const PopupCategoryChoose({
     super.key,
     required this.categories,
   });

@@ -37,5 +37,6 @@ final class AppColors {
   static const Color tigerOrange = const Color(0xffCC8441);
   static const Color darkOrchid = const Color(0xff9741CC);
   static const Color deepRose = const Color(0xffCC4173);
+  static const Color balticSea = const Color(0xff272727);
 
 }

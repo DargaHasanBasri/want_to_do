@@ -13,6 +13,7 @@ final class Routes {
   static const String Settings = 'settingsProvider';
   static const String Category = 'categoryProvider';
   static const String Profile = 'profileProvider';
+  static const String Calendar = 'calendarProvider';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -59,6 +60,10 @@ final class Routes {
       case Routes.Profile:
         return MaterialPageRoute(
           builder: (context) => ProfileProvider(),
+        );
+      case Routes.Calendar:
+        return MaterialPageRoute(
+          builder: (context) => CalendarProvider(),
         );
       default:
         return MaterialPageRoute(

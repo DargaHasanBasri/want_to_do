@@ -51,7 +51,8 @@
     "addTask": "Görev Ekle",
     "enterTaskTitle": "Görev başlığı gir",
     "description": "Açıklama",
-    "enterTaskDescription": "Görev açıklaması gir"
+    "enterTaskDescription": "Görev açıklaması gir",
+    "chooseTime": "Choose Time"
   },
   "appSettings": {
     "appSettings": "Uygulama Ayarları",

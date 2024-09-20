@@ -51,7 +51,8 @@
     "addTask": "Add Task",
     "enterTaskTitle": "Enter task title",
     "description": "Description",
-    "enterTaskDescription": "Enter task description"
+    "enterTaskDescription": "Enter task description",
+    "chooseTime": "Choose Time"
   },
   "appSettings": {
     "appSettings": "App Settings",

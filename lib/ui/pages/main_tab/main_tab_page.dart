@@ -1,6 +1,6 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
-import 'package:want_to_do/ui/pages/main_tab/components/popup_choose_time.dart';
+import 'package:want_to_do/ui/widgets/custom_time_picker.dart';
 
 class MainTabPage extends StatefulWidget {
   const MainTabPage({super.key});
@@ -28,9 +28,22 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
                     ? showPopupDialog(
                         context: context,
                         child: (context) {
-                          return PopupChooseTime(
+                          return CustomDatePicker(
                             onClickCancel: appRoutes.popIfBackStackNotEmpty,
-                            onClickChooseTime: appRoutes.popIfBackStackNotEmpty,
+                            onClickChooseTime: () {
+                              showPopupDialog(
+                                context: context,
+                                child: (context) {
+                                  return CustomTimePicker(
+                                    onClickCancel:
+                                        appRoutes.popIfBackStackNotEmpty,
+                                    onClickSave:
+                                        appRoutes.popIfBackStackNotEmpty,
+                                    dateTime: DateTime.now(),
+                                  );
+                                },
+                              );
+                            },
                           );
                         },
                       )

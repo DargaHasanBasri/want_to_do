@@ -74,3 +74,4 @@ export 'package:want_to_do/ui/pages/profile/components/bottom_sheet_change_image
 export 'package:want_to_do/ui/pages/calendar/calendar_provider.dart';
 export 'package:want_to_do/ui/pages/calendar/calendar_page.dart';
 export 'package:want_to_do/ui/pages/calendar/calendar_view_model.dart';
+export 'package:want_to_do/ui/widgets/custom_date_picker.dart';

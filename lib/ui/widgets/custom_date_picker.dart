@@ -3,10 +3,10 @@ import 'package:table_calendar/table_calendar.dart';
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
 
-class PopupChooseTime extends StatelessWidget {
+class CustomDatePicker extends StatelessWidget {
   final VoidCallback onClickCancel;
   final VoidCallback onClickChooseTime;
-  const PopupChooseTime({
+  const CustomDatePicker({
     super.key,
     required this.onClickCancel,
     required this.onClickChooseTime,

@@ -83,13 +83,11 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                       onTap: () {
                         showPopupDialog(
                           context: context,
-                          child: (context) {
-                            return PopupChangeName(
-                              newAccNameController: _vm.newAccNameController,
-                              onClickCancel: appRoutes.popIfBackStackNotEmpty,
-                              onClickEdit: () {},
-                            );
-                          },
+                          child: PopupChangeName(
+                            newAccNameController: _vm.newAccNameController,
+                            onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                            onClickEdit: () {},
+                          ),
                         );
                       },
                     ),
@@ -101,14 +99,12 @@ class _ProfilePageState extends BaseStatefulState<ProfilePage> {
                       onTap: () {
                         showPopupDialog(
                           context: context,
-                          child: (context) {
-                            return PopupChangePassword(
-                              oldPasswordController: _vm.oldPasswordController,
-                              newPasswordController: _vm.newPasswordController,
-                              onClickCancel: appRoutes.popIfBackStackNotEmpty,
-                              onClickEdit: () {},
-                            );
-                          },
+                          child: PopupChangePassword(
+                            oldPasswordController: _vm.oldPasswordController,
+                            newPasswordController: _vm.newPasswordController,
+                            onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                            onClickEdit: () {},
+                          ),
                         );
                       },
                     ),

@@ -19,6 +19,7 @@
   "next": "İleri",
   "cancel": "İptal Et",
   "edit": "Düzenle",
+  "save": "Kaydet",
   "getStarted": "Başlayın",
   "createAccount": "Hesap Oluştur",
   "todayAt": "Bugün",
@@ -52,7 +53,8 @@
     "enterTaskTitle": "Görev başlığı gir",
     "description": "Açıklama",
     "enterTaskDescription": "Görev açıklaması gir",
-    "chooseTime": "Zamanı Seç"
+    "chooseTime": "Zamanı Seç",
+    "taskPriority": "Görev Önceliği"
   },
   "appSettings": {
     "appSettings": "Uygulama Ayarları",

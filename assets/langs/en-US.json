@@ -19,6 +19,7 @@
   "next": "Next",
   "cancel": "Cancel",
   "edit": "Edit",
+  "save": "Save",
   "getStarted": "Get Started",
   "createAccount": "Create Account",
   "todayAt": "Today At",
@@ -52,7 +53,8 @@
     "enterTaskTitle": "Enter task title",
     "description": "Description",
     "enterTaskDescription": "Enter task description",
-    "chooseTime": "Choose Time"
+    "chooseTime": "Choose Time",
+    "taskPriority": "Task Priority"
   },
   "appSettings": {
     "appSettings": "App Settings",

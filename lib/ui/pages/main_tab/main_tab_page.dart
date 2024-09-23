@@ -1,5 +1,6 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
+import 'package:want_to_do/ui/widgets/custom_task_priority.dart';
 import 'package:want_to_do/ui/widgets/custom_time_picker.dart';
 
 class MainTabPage extends StatefulWidget {
@@ -12,7 +13,7 @@ class MainTabPage extends StatefulWidget {
 class _MainTabPageState extends BaseStatefulState<MainTabPage> {
   @override
   Widget build(BuildContext context) {
-    final _vm = context.watch<MainTabViewModel>();
+    final _vm = Provider.of<MainTabViewModel>(context);
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       extendBody: true,
@@ -27,25 +28,19 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
                 _vm.checkTaskParameters()
                     ? showPopupDialog(
                         context: context,
-                        child: (context) {
-                          return CustomDatePicker(
-                            onClickCancel: appRoutes.popIfBackStackNotEmpty,
-                            onClickChooseTime: () {
-                              showPopupDialog(
-                                context: context,
-                                child: (context) {
-                                  return CustomTimePicker(
-                                    onClickCancel:
-                                        appRoutes.popIfBackStackNotEmpty,
-                                    onClickSave:
-                                        appRoutes.popIfBackStackNotEmpty,
-                                    dateTime: DateTime.now(),
-                                  );
-                                },
-                              );
-                            },
-                          );
-                        },
+                        child: CustomDatePicker(
+                          onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                          onClickChooseTime: () {
+                            showPopupDialog(
+                              context: context,
+                              child: CustomTimePicker(
+                                onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                                onClickSave: appRoutes.popIfBackStackNotEmpty,
+                                dateTime: DateTime.now(),
+                              ),
+                            );
+                          },
+                        ),
                       )
                     : showToastMessage(
                         LocaleKeys.errorMessages_emptyOrNotSame.locale,
@@ -55,11 +50,9 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
                 _vm.checkTaskParameters()
                     ? showPopupDialog(
                         context: context,
-                        child: (context) {
-                          return PopupCategoryChoose(
-                            categories: _vm.categories,
-                          );
-                        },
+                        child: PopupCategoryChoose(
+                          categories: _vm.categories,
+                        ),
                       )
                     : showToastMessage(
                         LocaleKeys.errorMessages_emptyOrNotSame.locale,
@@ -67,7 +60,17 @@ class _MainTabPageState extends BaseStatefulState<MainTabPage> {
               },
               onclickTaskPriority: () {
                 _vm.checkTaskParameters()
-                    ? appRoutes.navigateToReplacement(Routes.MainTab)
+                    ? showPopupDialog(
+                        context: context,
+                        child: CustomTaskPriority(
+                          onClickCancel: appRoutes.popIfBackStackNotEmpty,
+                          onClickSave: appRoutes.popIfBackStackNotEmpty,
+                          selectedPriority: _vm.selectedPriority,
+                          onPrioritySelected: (int value) {
+                            _vm.selectedPriority = value;
+                          },
+                        ),
+                      )
                     : showToastMessage(
                         LocaleKeys.errorMessages_emptyOrNotSame.locale,
                       );

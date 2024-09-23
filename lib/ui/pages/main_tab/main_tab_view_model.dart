@@ -8,12 +8,22 @@ class MainTabViewModel extends BaseViewModel {
 
   int _currentIndex = 0;
 
+  int get currentIndex => _currentIndex;
+
   set currentIndex(int value) {
     _currentIndex = value;
     notifyListeners();
   }
 
-  int get currentIndex => _currentIndex;
+  int _selectedPriority = 1;
+
+  int get selectedPriority => _selectedPriority;
+
+  set selectedPriority(int value) {
+    _selectedPriority = value;
+    print("Priority changed: $value");
+    notifyListeners();
+  }
 
   String _taskTitleText = '';
   String _taskDescriptionText = '';
@@ -43,25 +53,30 @@ class MainTabViewModel extends BaseViewModel {
   /// TODO: Static for now since there is no backend
   /// TODO: will then connect with the backend
   List<CategoryModel> categories = [
-    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(
+        icon: AppAssets.icCategoryUniversityPath, label: 'University'),
     CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
     CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
-    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(
+        icon: AppAssets.icCategoryUniversityPath, label: 'University'),
     CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
     CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
-    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(
+        icon: AppAssets.icCategoryUniversityPath, label: 'University'),
     CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
     CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
-    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(
+        icon: AppAssets.icCategoryUniversityPath, label: 'University'),
     CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
     CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
     CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
-    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(
+        icon: AppAssets.icCategoryUniversityPath, label: 'University'),
     CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
     CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
     CategoryModel(icon: AppAssets.icCategoryWorkPath, label: 'Work'),
-    CategoryModel(icon: AppAssets.icCategoryUniversityPath, label: 'University'),
+    CategoryModel(
+        icon: AppAssets.icCategoryUniversityPath, label: 'University'),
     CategoryModel(icon: AppAssets.icCategoryHomePath, label: 'Home'),
-
   ];
 }

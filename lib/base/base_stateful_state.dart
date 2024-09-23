@@ -49,7 +49,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
 
   void showPopupDialog({
     required BuildContext context,
-    required Widget Function(BuildContext context) child,
+    required Widget child,
   }) {
     showDialog<void>(
       barrierColor: AppColors.black.withOpacity(0.74),
@@ -63,7 +63,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
           insetPadding: EdgeInsets.symmetric(horizontal: 24),
           elevation: 0,
           backgroundColor: AppColors.darkGrey,
-          child: child(context),
+          child: child,
         );
       },
     );

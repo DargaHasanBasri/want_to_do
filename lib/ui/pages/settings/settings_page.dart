@@ -82,9 +82,7 @@ class _SettingsPageState extends BaseStatefulState<SettingsPage> {
           onTap: () {
             showPopupDialog(
               context: context,
-              child: (context) {
-                return _buildPopupChild();
-              },
+              child: _buildPopupChild(),
             );
           },
         ),

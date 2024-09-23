@@ -54,7 +54,7 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Text(
-            'Choose Time',
+            LocaleKeys.home_chooseTime,
             style: TextStyle(
               color: AppColors.white.withOpacity(0.87),
               fontSize: 16,
@@ -141,7 +141,7 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
               SizedBox(width: 10),
               Expanded(
                 child: CustomButton(
-                  title: LocaleKeys.home_chooseTime.locale,
+                  title: LocaleKeys.save.locale,
                   onClick: () => widget.onClickSave.call(),
                 ),
               ),

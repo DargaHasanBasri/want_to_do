@@ -21,6 +21,7 @@ abstract class  LocaleKeys {
   static const next = 'next';
   static const cancel = 'cancel';
   static const edit = 'edit';
+  static const save = 'save';
   static const getStarted = 'getStarted';
   static const createAccount = 'createAccount';
   static const todayAt = 'todayAt';
@@ -52,6 +53,7 @@ abstract class  LocaleKeys {
   static const home_description = 'home.description';
   static const home_enterTaskDescription = 'home.enterTaskDescription';
   static const home_chooseTime = 'home.chooseTime';
+  static const home_taskPriority = 'home.taskPriority';
   static const home = 'home';
   static const appSettings_appSettings = 'appSettings.appSettings';
   static const appSettings_changeColor = 'appSettings.changeColor';

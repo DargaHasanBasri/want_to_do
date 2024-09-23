@@ -124,7 +124,7 @@ class CustomDatePicker extends StatelessWidget {
               SizedBox(width: 10),
               Expanded(
                 child: CustomButton(
-                  title: LocaleKeys.home_chooseTime.locale,
+                  title: LocaleKeys.save.locale,
                   onClick: () => onClickChooseTime.call(),
                 ),
               ),

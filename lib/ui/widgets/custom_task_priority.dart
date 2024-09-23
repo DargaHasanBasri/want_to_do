@@ -42,12 +42,10 @@ class CustomTaskPriority extends StatelessWidget {
             runSpacing: 16,
             children: [
               ...priority.map((priority) {
-                return GestureDetector(
+                return _buildPriorityItem(
                   onTap: () => onPrioritySelected(priority),
-                  child: _buildPriorityItem(
-                    isClick: selectedPriority == priority,
-                    priority: priority,
-                  ),
+                  isClick: selectedPriority == priority,
+                  priority: priority,
                 );
               }).toList(),
             ],
@@ -79,30 +77,37 @@ class CustomTaskPriority extends StatelessWidget {
     );
   }
 
-  Widget _buildPriorityItem({required int priority, required bool isClick}) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-      decoration: BoxDecoration(
-        color: isClick ? AppColors.lavenderBlue : AppColors.balticSea,
-        borderRadius: BorderRadius.circular(6),
-      ),
-      child: Column(
-        children: [
-          Image.asset(
-            AppAssets.icFlagPath,
-            width: 24,
-            height: 24,
-          ),
-          SizedBox(height: 6),
-          Text(
-            '${priority.toString()}',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w400,
-              color: AppColors.white.withOpacity(0.87),
+  Widget _buildPriorityItem({
+    required int priority,
+    required bool isClick,
+    required VoidCallback onTap,
+  }) {
+    return GestureDetector(
+      onTap: () => onTap.call(),
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+        decoration: BoxDecoration(
+          color: isClick ? AppColors.lavenderBlue : AppColors.balticSea,
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: Column(
+          children: [
+            Image.asset(
+              AppAssets.icFlagPath,
+              width: 24,
+              height: 24,
             ),
-          ),
-        ],
+            SizedBox(height: 6),
+            Text(
+              '${priority.toString()}',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: AppColors.white.withOpacity(0.87),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

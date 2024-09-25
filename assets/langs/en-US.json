@@ -67,7 +67,8 @@
   },
   "errorMessages": {
     "missingOrIncorrect": "You have entered incompletely or incorrectly!",
-    "emptyOrNotSame": "Please do not leave any empty fields and enter the same passwords!"
+    "emptyOrNotSame": "Please do not leave any empty fields and enter the same passwords!",
+    "charactersLimit": "No more than 12 characters can be entered"
   },
   "category": {
     "categoryTitle": "Create new category",

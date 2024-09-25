@@ -1,5 +1,6 @@
 import 'package:want_to_do/export.dart';
 import 'package:want_to_do/generated/locale_keys.g.dart';
+import 'package:want_to_do/ui/pages/category/components/category_color_item.dart';
 
 class CategoryPage extends StatefulWidget {
   const CategoryPage({super.key});
@@ -20,6 +21,7 @@ class _CategoryPageState extends BaseStatefulState<CategoryPage> {
   }
 
   SafeArea _buildBody() {
+    final _vm = context.watch<CategoryViewModel>();
     return SafeArea(
       child: Padding(
         padding: AppPaddings.pagePaddingAll,
@@ -40,6 +42,9 @@ class _CategoryPageState extends BaseStatefulState<CategoryPage> {
               textFieldBgColor: AppColors.darkJungleGreen,
               textFieldTitle: LocaleKeys.category_categoryName.locale,
               hintText: LocaleKeys.category_categoryNameHintText.locale,
+              onChanged: (String text) {
+                _vm.categoryNameLength = _categoryNameController.text.length;
+              },
             ),
             SizedBox(height: 24),
             Text(
@@ -66,6 +71,18 @@ class _CategoryPageState extends BaseStatefulState<CategoryPage> {
                 color: AppColors.white.withOpacity(0.87),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: SizedBox(
+                height: 50,
+                child: CategoryColorItem(
+                  categoryColors: _vm.customColors,
+                  onTapItem: (int index) {
+                    debugPrint('${_vm.customColors[index]}');
+                  },
+                ),
+              ),
+            ),
             Spacer(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 24),
@@ -85,7 +102,14 @@ class _CategoryPageState extends BaseStatefulState<CategoryPage> {
                     child: CustomButton(
                       title: LocaleKeys.category_createCategory.locale,
                       borderRadius: 6,
-                      onClick: () {},
+                      onClick: () {
+                        /// TODO: Change showToastMessage content 'success'
+                        _vm.isLimitExcceed(12)
+                            ? showToastMessage(
+                                LocaleKeys.errorMessages_charactersLimit.locale,
+                              )
+                            : showToastMessage("Success");
+                      },
                     ),
                   ),
                 ],

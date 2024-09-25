@@ -65,6 +65,7 @@ abstract class  LocaleKeys {
   static const appSettings = 'appSettings';
   static const errorMessages_missingOrIncorrect = 'errorMessages.missingOrIncorrect';
   static const errorMessages_emptyOrNotSame = 'errorMessages.emptyOrNotSame';
+  static const errorMessages_charactersLimit = 'errorMessages.charactersLimit';
   static const errorMessages = 'errorMessages';
   static const category_categoryTitle = 'category.categoryTitle';
   static const category_categoryName = 'category.categoryName';

@@ -67,7 +67,8 @@
   },
   "errorMessages": {
     "missingOrIncorrect": "Eksik veya hatalı giriş yaptınız!",
-    "emptyOrNotSame": "Lütfen boş alan bırakmayın ve aynı şifreleri girin!"
+    "emptyOrNotSame": "Lütfen boş alan bırakmayın ve aynı şifreleri girin!",
+    "charactersLimit": "En fazla 12 karakter girilebilir!"
   },
   "category": {
     "categoryTitle": "Yeni Kategori Oluştur",
